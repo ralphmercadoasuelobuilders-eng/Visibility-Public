@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
   <meta name="theme-color" content="#071a3a">
 
   <title>Rhyene Ken's 2nd Birthday Invitation</title>
 
-  <meta name="description"
-        content="You're invited to Rhyene Ken L. Mercado's 2nd Birthday Celebration on August 30, 2026 at Masskara Chicken Inasal, Bacolod City.">
+  <meta
+    name="description"
+    content="You're invited to Rhyene Ken L. Mercado's 2nd Birthday Celebration on August 30, 2026 at 6:00 PM at Masskara Chicken Inasal, Bacolod City."
+  >
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -24,8 +29,14 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, sans-serif;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
 
       background:
         radial-gradient(
@@ -46,83 +57,154 @@
         );
 
       color: white;
+
       min-height: 100vh;
     }
 
+
     .container {
+
       width: min(100%, 760px);
+
       margin: 0 auto;
-      padding: 14px 12px 35px;
+
+      padding:
+        14px
+        12px
+        35px;
     }
+
 
     .header {
+
       text-align: center;
-      padding: 12px 8px 16px;
+
+      padding:
+        12px
+        8px
+        16px;
     }
 
+
     .header small {
+
       color: #ffd95a;
+
       font-weight: 800;
+
       letter-spacing: 2px;
     }
 
+
     .header h1 {
-      margin: 7px 0 4px;
-      font-size: clamp(25px, 7vw, 40px);
+
+      margin:
+        7px
+        0
+        6px;
+
+      font-size:
+        clamp(
+          25px,
+          7vw,
+          40px
+        );
+
       line-height: 1.1;
     }
 
+
     .header p {
+
       margin: 0;
-      color: rgba(255,255,255,.75);
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .82
+        );
+
+      line-height: 1.5;
+
+      font-weight: 600;
     }
 
+
     .poster-box {
+
       position: relative;
+
       overflow: hidden;
+
       border-radius: 22px;
+
       background: white;
 
       box-shadow:
-        0 20px 50px
-        rgba(0,0,0,.38);
+        0
+        20px
+        50px
+        rgba(
+          0,
+          0,
+          0,
+          .38
+        );
     }
 
+
     .poster {
+
       width: 100%;
+
       height: auto;
+
       display: block;
     }
 
+
     /*
-      This invisible clickable area
-      is positioned over the location
-      section of the invitation.
+      Invisible clickable area
+      over the location portion
+      of the invitation poster.
     */
 
     .poster-location {
+
       position: absolute;
 
       left: 49%;
+
       top: 73%;
 
       width: 49%;
+
       height: 20%;
 
       border-radius: 18px;
     }
 
+
     .buttons {
+
       display: grid;
+
       gap: 12px;
+
       margin-top: 16px;
     }
 
+
     .button {
+
       min-height: 58px;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       text-align: center;
@@ -132,6 +214,7 @@
       border-radius: 17px;
 
       font-size: 18px;
+
       font-weight: 800;
 
       text-decoration: none;
@@ -140,15 +223,27 @@
 
       border:
         1px solid
-        rgba(255,255,255,.20);
+        rgba(
+          255,
+          255,
+          255,
+          .20
+        );
 
       background:
-        rgba(255,255,255,.12);
+        rgba(
+          255,
+          255,
+          255,
+          .12
+        );
 
       cursor: pointer;
     }
 
+
     .location-button {
+
       background:
         linear-gradient(
           135deg,
@@ -157,16 +252,28 @@
         );
 
       box-shadow:
-        0 10px 25px
-        rgba(220,20,50,.30);
+        0
+        10px
+        25px
+        rgba(
+          220,
+          20,
+          50,
+          .30
+        );
     }
 
+
     button.button {
+
       width: 100%;
+
       font-family: inherit;
     }
 
+
     .details {
+
       margin-top: 17px;
 
       padding: 18px;
@@ -174,28 +281,53 @@
       border-radius: 20px;
 
       background:
-        rgba(255,255,255,.10);
+        rgba(
+          255,
+          255,
+          255,
+          .10
+        );
 
       border:
         1px solid
-        rgba(255,255,255,.16);
+        rgba(
+          255,
+          255,
+          255,
+          .16
+        );
     }
+
 
     .detail {
+
       display: flex;
+
       gap: 13px;
 
-      padding: 11px 0;
+      padding:
+        11px
+        0;
     }
+
 
     .detail + .detail {
+
       border-top:
         1px solid
-        rgba(255,255,255,.12);
+        rgba(
+          255,
+          255,
+          255,
+          .12
+        );
     }
 
+
     .detail-icon {
+
       width: 38px;
+
       height: 38px;
 
       min-width: 38px;
@@ -203,89 +335,157 @@
       border-radius: 11px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       background:
-        rgba(255,255,255,.12);
+        rgba(
+          255,
+          255,
+          255,
+          .12
+        );
 
       font-size: 21px;
     }
 
+
     .detail strong {
+
       display: block;
+
       margin-bottom: 3px;
     }
 
+
     .detail span {
+
       color:
-        rgba(255,255,255,.77);
+        rgba(
+          255,
+          255,
+          255,
+          .78
+        );
 
       line-height: 1.45;
     }
 
+
+    .time-highlight {
+
+      color: #ffdd64 !important;
+
+      font-size: 18px;
+
+      font-weight: 800;
+    }
+
+
     #countdown {
+
       margin-top: 18px;
 
       text-align: center;
 
       font-size: 18px;
+
       font-weight: 800;
 
       color: #ffdd64;
+
+      line-height: 1.5;
     }
 
+
     .footer {
+
       text-align: center;
 
       margin-top: 18px;
 
       color:
-        rgba(255,255,255,.62);
+        rgba(
+          255,
+          255,
+          255,
+          .64
+        );
 
       font-size: 13px;
 
       line-height: 1.5;
     }
 
+
     @media (max-width: 420px) {
 
       .container {
+
         padding-left: 9px;
+
         padding-right: 9px;
       }
 
+
       .poster-box {
+
         border-radius: 17px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
   <main class="container">
+
+
+    <!-- HEADER -->
 
     <header class="header">
 
+
       <small>
+
         BIRTHDAY INVITATION
+
       </small>
 
+
       <h1>
+
         🎉 Rhyene Ken is Turning 2!
+
       </h1>
 
+
       <p>
-        You're invited to celebrate with us!
+
+        Sunday, August 30, 2026
+
+        <br>
+
+        🕕 6:00 PM
+
       </p>
+
 
     </header>
 
 
-    <!-- Birthday Invitation Image -->
+
+    <!-- INVITATION IMAGE -->
 
     <section class="poster-box">
+
 
       <img
         src="invitation.png"
@@ -293,148 +493,270 @@
         alt="Rhyene Ken L. Mercado 2nd Birthday Invitation"
       >
 
-      <!-- Clickable area on poster -->
+
+      <!-- CLICKABLE LOCATION AREA -->
 
       <a
         class="poster-location"
         href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
-        aria-label="Open Masskara Chicken Inasal in Google Maps">
+        aria-label="Open Masskara Chicken Inasal in Google Maps"
+      >
       </a>
+
 
     </section>
 
 
-    <!-- Buttons -->
+
+    <!-- BUTTONS -->
 
     <section class="buttons">
 
+
+      <!-- GOOGLE MAPS -->
+
       <a
         class="button location-button"
-        href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City">
+        href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
+      >
 
         📍 View Location
 
       </a>
 
 
+
+      <!-- GOOGLE CALENDAR -->
+
       <a
         class="button"
-        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyene+Ken+L.+Mercado+-+2nd+Birthday&dates=20260830%2F20260831&details=You%27re+invited+to+Rhyene+Ken+L.+Mercado%27s+2nd+Birthday+Celebration.&location=Masskara+Chicken+Inasal%2C+La+Salle+Avenue%2C+Villamonte%2C+Bacolod+City">
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyene+Ken+L.+Mercado+-+2nd+Birthday&dates=20260830T100000Z%2F20260830T120000Z&details=You%27re+invited+to+Rhyene+Ken+L.+Mercado%27s+2nd+Birthday+Celebration+at+6%3A00+PM.&location=Masskara+Chicken+Inasal%2C+La+Salle+Avenue%2C+Villamonte%2C+Bacolod+City"
+      >
 
         📅 Add to Calendar
 
       </a>
 
 
+
+      <!-- SHARE BUTTON -->
+
       <button
         class="button"
         id="shareButton"
-        type="button">
+        type="button"
+      >
 
         📤 Share Invitation
 
       </button>
 
+
     </section>
 
 
-    <!-- Birthday Details -->
+
+    <!-- DETAILS -->
 
     <section class="details">
 
+
+      <!-- CELEBRANT -->
+
       <div class="detail">
 
+
         <div class="detail-icon">
+
           🎂
+
         </div>
+
 
         <div>
 
+
           <strong>
+
             Celebrant
+
           </strong>
 
+
           <span>
+
             Rhyene Ken L. Mercado
+
             <br>
+
             2nd Birthday
+
           </span>
 
+
         </div>
+
 
       </div>
 
 
+
+      <!-- DATE -->
+
       <div class="detail">
 
+
         <div class="detail-icon">
+
           📅
+
         </div>
+
 
         <div>
 
+
           <strong>
+
             Date
+
           </strong>
 
+
           <span>
+
             Sunday,
+
+            <br>
+
             August 30, 2026
+
           </span>
+
 
         </div>
 
+
       </div>
 
+
+
+      <!-- TIME -->
 
       <div class="detail">
 
+
         <div class="detail-icon">
-          📍
+
+          🕕
+
         </div>
+
 
         <div>
 
+
           <strong>
-            Venue
+
+            Time
+
           </strong>
 
-          <span>
-            Masskara Chicken Inasal
-            <br>
-            La Salle Avenue,
-            Villamonte,
-            Bacolod City
+
+          <span class="time-highlight">
+
+            6:00 PM
+
           </span>
+
 
         </div>
 
+
       </div>
+
+
+
+      <!-- VENUE -->
+
+      <div class="detail">
+
+
+        <div class="detail-icon">
+
+          📍
+
+        </div>
+
+
+        <div>
+
+
+          <strong>
+
+            Venue
+
+          </strong>
+
+
+          <span>
+
+            Masskara Chicken Inasal
+
+            <br>
+
+            La Salle Avenue,
+
+            Villamonte,
+
+            Bacolod City
+
+          </span>
+
+
+        </div>
+
+
+      </div>
+
 
     </section>
 
 
-    <!-- Countdown -->
+
+    <!-- COUNTDOWN -->
 
     <div id="countdown">
     </div>
 
 
+
+    <!-- FOOTER -->
+
     <div class="footer">
 
       ❤️ We can't wait to celebrate
+
+      <br>
+
       Rhyene Ken's special day with you!
 
     </div>
 
+
   </main>
+
 
 
   <script>
 
+
     /*
-      SHARE BUTTON
+      ====================================
+      SHARE INVITATION
+      ====================================
     */
+
 
     const shareButton =
       document.getElementById(
@@ -443,158 +765,282 @@
 
 
     shareButton.addEventListener(
+
       "click",
+
       async function () {
+
 
         const shareData = {
 
+
           title:
-            "Rhyene Ken's 2nd Birthday",
+
+            "Rhyene Ken's 2nd Birthday Invitation",
+
 
           text:
+
             "🎉 You're invited to Rhyene Ken L. Mercado's 2nd Birthday!\n\n" +
+
             "📅 Sunday, August 30, 2026\n" +
+
+            "🕕 6:00 PM\n\n" +
+
             "📍 Masskara Chicken Inasal\n" +
+
             "La Salle Avenue, Villamonte, Bacolod City",
 
+
           url:
+
             window.location.href
+
         };
+
 
 
         if (navigator.share) {
 
+
           try {
 
+
             await navigator.share(
+
               shareData
+
             );
 
+
           }
+
+
           catch (error) {
 
+
             console.log(
+
               "Sharing cancelled."
+
             );
+
 
           }
 
+
         }
+
 
         else {
 
+
           alert(
-            "Copy this page link and send it through Messenger."
+
+            "Copy this website link and send it through Messenger."
+
           );
+
 
         }
 
+
       }
+
     );
 
 
+
     /*
-      BIRTHDAY COUNTDOWN
+      ====================================
+      COUNTDOWN TO 6:00 PM
+      AUGUST 30, 2026
+      PHILIPPINE TIME
+      ====================================
     */
+
 
     function updateCountdown() {
 
-      const birthday =
+
+      const birthdayParty =
+
         new Date(
-          "2026-08-30T00:00:00+08:00"
+
+          "2026-08-30T18:00:00+08:00"
+
         );
 
 
-      const birthdayEnd =
+
+      const partyEnd =
+
         new Date(
-          "2026-08-31T00:00:00+08:00"
+
+          "2026-08-30T23:59:59+08:00"
+
         );
+
 
 
       const now =
+
         new Date();
 
 
+
       const countdown =
+
         document.getElementById(
+
           "countdown"
+
         );
+
+
+
+      /*
+        PARTY IS HAPPENING NOW
+      */
 
 
       if (
-        now >= birthday &&
-        now < birthdayEnd
+
+        now >= birthdayParty &&
+
+        now <= partyEnd
+
       ) {
 
+
         countdown.innerHTML =
-          "🎉 It's Rhyene Ken's birthday today!";
+
+          "🎉 It's party time! Happy 2nd Birthday, Rhyene Ken!";
+
 
         return;
+
       }
 
 
-      if (now >= birthdayEnd) {
+
+      /*
+        PARTY ALREADY FINISHED
+      */
+
+
+      if (
+
+        now > partyEnd
+
+      ) {
+
 
         countdown.innerHTML =
-          "❤️ Thank you for celebrating with us!";
+
+          "❤️ Thank you for celebrating Rhyene Ken's birthday with us!";
+
 
         return;
+
       }
+
+
+
+      /*
+        CALCULATE TIME REMAINING
+      */
 
 
       let difference =
-        birthday.getTime() -
+
+        birthdayParty.getTime() -
+
         now.getTime();
 
 
+
       const days =
+
         Math.floor(
+
           difference /
+
           86400000
+
         );
 
 
+
       difference %=
+
         86400000;
 
 
+
       const hours =
+
         Math.floor(
+
           difference /
+
           3600000
+
         );
+
 
 
       difference %=
+
         3600000;
 
 
+
       const minutes =
+
         Math.floor(
+
           difference /
+
           60000
+
         );
 
 
+
       countdown.innerHTML =
+
         "⏳ " +
+
         days + "d " +
+
         hours + "h " +
+
         minutes + "m " +
-        "until the birthday!";
+
+        "until Rhyene Ken's birthday party at 6:00 PM!";
+
 
     }
+
 
 
     updateCountdown();
 
 
+
     setInterval(
+
       updateCountdown,
+
       60000
+
     );
+
 
   </script>
 
+
 </body>
+
 </html>
