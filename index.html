@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
-
-  <meta name="theme-color" content="#0758b8">
-
-  <title>Rhyne Ken L. Mercado's 2nd Birthday Invitation</title>
+  <title>Rhyne Ken's 2nd Birthday Invitation</title>
 
   <meta
     name="description"
-    content="You're invited to Rhyne Ken L. Mercado's 2nd Birthday on August 30, 2026 at 6:00 PM at Masskara Chicken Inasal, La Salle Avenue, Villamonte, Bacolod City."
-  >
-
-  <!-- Facebook / Messenger Preview -->
-  <meta property="og:type" content="website">
-
-  <meta
-    property="og:title"
-    content="You're Invited! Rhyne Ken L. Mercado Turns 2 🎉"
-  >
-
-  <meta
-    property="og:description"
-    content="August 30, 2026 • 6:00 PM • Masskara Chicken Inasal • Bacolod City"
-  >
-
-  <meta property="og:image" content="invitation.png">
-
-  <meta name="twitter:card" content="summary_large_image">
+    content="You're invited to Rhyne Ken L. Mercado's 2nd Birthday Celebration."
+  />
 
   <style>
     * {
@@ -45,82 +22,49 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-      color: white;
-
+      font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(
-          circle at 15% 5%,
-          rgba(240, 28, 46, 0.22),
-          transparent 24rem
-        ),
-        radial-gradient(
-          circle at 90% 18%,
-          rgba(24, 104, 216, 0.28),
-          transparent 26rem
-        ),
-        linear-gradient(
-          180deg,
-          #08142b,
-          #0b2550 55%,
-          #061329
-        );
+        radial-gradient(circle at 15% 5%, rgba(239, 35, 60, .28), transparent 25rem),
+        radial-gradient(circle at 90% 20%, rgba(20, 90, 220, .32), transparent 28rem),
+        linear-gradient(180deg, #07152e, #0c2b5a 55%, #061327);
+      color: white;
+      min-height: 100vh;
     }
 
     .wrap {
       width: min(100%, 760px);
-      margin: 0 auto;
-      padding: 18px 14px 36px;
+      margin: auto;
+      padding: 18px 14px 50px;
     }
-
-    /* HEADER */
 
     .top {
       text-align: center;
-      margin: 4px 0 14px;
+      padding: 8px 5px 16px;
     }
 
     .eyebrow {
+      color: #ffd633;
+      font-weight: 900;
       font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      color: #ffd95a;
     }
 
-    .top h1 {
-      font-size: clamp(23px, 6vw, 38px);
-      line-height: 1.08;
-      margin: 7px 0 6px;
+    h1 {
+      margin: 8px 0 5px;
+      font-size: clamp(25px, 7vw, 42px);
     }
 
-    .top p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.8);
+    .subtitle {
+      color: rgba(255,255,255,.82);
       font-size: 15px;
     }
 
-    /* INVITATION PHOTO */
-
     .poster-shell {
-      position: relative;
-      overflow: hidden;
-
-      border-radius: 24px;
-
       background: white;
-
-      box-shadow:
-        0 22px 55px rgba(0, 0, 0, 0.38);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 22px 55px rgba(0,0,0,.38);
     }
 
     .poster {
@@ -129,563 +73,1399 @@
       height: auto;
     }
 
-    /*
-      Invisible clickable area over
-      the VIEW LOCATION part of the PNG.
-    */
-
-    .poster-location-link {
-      position: absolute;
-
-      left: 49%;
-      top: 75%;
-
-      width: 48%;
-      height: 17%;
-
-      border-radius: 20px;
-
-      text-indent: -9999px;
-      overflow: hidden;
-      outline: 0;
-    }
-
-    .poster-location-link:focus-visible {
-      box-shadow:
-        inset 0 0 0 5px #ffd54a;
-    }
-
-    @media (hover: hover) {
-
-      .poster-location-link:hover {
-        background: rgba(255, 255, 255, 0.06);
-
-        box-shadow:
-          inset 0 0 0 3px rgba(255, 213, 74, 0.8);
-      }
-
-    }
-
-    /* BUTTONS */
-
     .actions {
-      margin-top: 16px;
-
       display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      gap: 11px;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 16px 0;
     }
 
     .btn {
-      min-height: 52px;
-
       border: 0;
       border-radius: 16px;
-
-      padding: 12px 14px;
-
-      font-weight: 850;
-      font-size: 15px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 8px;
-
+      padding: 15px 12px;
       text-decoration: none;
-
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
       cursor: pointer;
+      transition: .2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+    }
 
-      -webkit-tap-highlight-color: transparent;
+    .btn:active {
+      transform: scale(.97);
     }
 
     .btn-primary {
+      background: #e91f35;
+      color: white;
+    }
+
+    .btn-blue {
+      background: #0864d8;
+      color: white;
+    }
+
+    .btn-yellow {
+      background: #ffd632;
+      color: #08152e;
+    }
+
+    .btn-dark {
+      background: #172947;
+      color: white;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .quiz-button {
       grid-column: 1 / -1;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #e51c34,
-          #bb112a
-        );
-
-      box-shadow:
-        0 9px 25px rgba(229, 28, 52, 0.35);
+      font-size: 18px;
+      background: linear-gradient(135deg, #ffce22, #ff8c00);
+      color: #07152e;
+      box-shadow: 0 8px 24px rgba(255,175,0,.25);
     }
 
-    .btn-secondary {
-      color: white;
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
-      border:
-        1px solid rgba(255, 255, 255, 0.18);
-
-      backdrop-filter: blur(10px);
+    .quiz-button.locked {
+      opacity: .55;
+      cursor: not-allowed;
+      filter: grayscale(.3);
     }
-
-    /* DETAILS */
 
     .details {
-      margin-top: 16px;
-
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.10);
       border-radius: 20px;
-
-      padding: 16px;
-
-      background:
-        rgba(255, 255, 255, 0.09);
-
-      border:
-        1px solid rgba(255, 255, 255, 0.14);
-
-      backdrop-filter: blur(12px);
+      padding: 8px 16px;
+      margin: 16px 0;
+      backdrop-filter: blur(8px);
     }
 
     .detail {
       display: flex;
-
       gap: 12px;
-
-      align-items: flex-start;
-
-      padding: 9px 0;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,.09);
     }
 
-    .detail + .detail {
-      border-top:
-        1px solid rgba(255, 255, 255, 0.12);
+    .detail:last-child {
+      border-bottom: 0;
     }
 
-    .icon {
-      width: 34px;
-      height: 34px;
-
-      flex: 0 0 34px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 10px;
-
-      background:
-        rgba(255, 255, 255, 0.12);
+    .detail .icon {
+      width: 35px;
+      font-size: 24px;
     }
 
     .detail b {
       display: block;
-
-      font-size: 14px;
-
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .detail span {
-      color:
-        rgba(255, 255, 255, 0.78);
-
-      font-size: 14px;
-
-      line-height: 1.4;
+      color: rgba(255,255,255,.78);
+      line-height: 1.45;
     }
-
-    /* COUNTDOWN */
 
     .countdown {
       text-align: center;
-
-      margin-top: 14px;
-
+      background: rgba(255,214,50,.12);
+      border: 1px solid rgba(255,214,50,.28);
+      color: #ffe46d;
+      padding: 13px;
+      border-radius: 16px;
+      margin: 14px 0;
       font-weight: 800;
-
-      color: #ffde67;
-
-      min-height: 22px;
     }
 
-    .note {
+    /* QUIZ */
+
+    .quiz-section {
+      display: none;
+      margin-top: 25px;
+      background: rgba(255,255,255,.96);
+      color: #11213d;
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 0 25px 55px rgba(0,0,0,.35);
+    }
+
+    .quiz-section.active {
+      display: block;
+      animation: fadeIn .35s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quiz-header {
       text-align: center;
-
-      color:
-        rgba(255, 255, 255, 0.64);
-
-      font-size: 12px;
-
-      line-height: 1.45;
-
-      margin: 15px 10px 0;
+      margin-bottom: 20px;
     }
 
-    /* MOBILE */
+    .quiz-header .spider {
+      font-size: 45px;
+    }
 
-    @media (max-width: 430px) {
+    .quiz-header h2 {
+      margin: 5px 0;
+      color: #d91e36;
+      font-size: 30px;
+    }
 
+    .quiz-header p {
+      color: #637086;
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
+    .leader-card {
+      background: linear-gradient(135deg, #091c3b, #113e7b);
+      color: white;
+      border-radius: 18px;
+      padding: 17px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .leader-label {
+      color: #ffd632;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+
+    .leader-name {
+      font-size: 24px;
+      font-weight: 900;
+      margin: 7px 0 2px;
+    }
+
+    .leader-score {
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+    }
+
+    .name-box {
+      text-align: center;
+      padding: 5px 0 10px;
+    }
+
+    .name-box h3 {
+      font-size: 23px;
+      margin: 8px 0;
+    }
+
+    .name-box p {
+      color: #657187;
+    }
+
+    .name-input {
+      width: 100%;
+      border: 2px solid #d8deea;
+      border-radius: 14px;
+      padding: 15px;
+      font-size: 17px;
+      outline: none;
+      margin: 10px 0 12px;
+      text-align: center;
+    }
+
+    .name-input:focus {
+      border-color: #1568d4;
+    }
+
+    .quiz-main-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 15px;
+      padding: 15px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      background: linear-gradient(135deg, #e91f35, #b90926);
+      color: white;
+    }
+
+    .quiz-main-btn:active {
+      transform: scale(.98);
+    }
+
+    .question-container {
+      display: none;
+    }
+
+    .progress-line {
+      height: 8px;
+      background: #e7ebf2;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 10%;
+      background: linear-gradient(90deg, #e91f35, #1165d8);
+      transition: width .3s;
+    }
+
+    .question-count {
+      color: #6a7588;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 9px;
+    }
+
+    .question-text {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 18px;
+      color: #12233f;
+    }
+
+    .answers {
+      display: grid;
+      gap: 11px;
+    }
+
+    .answer-btn {
+      width: 100%;
+      border: 2px solid #dfe4ec;
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      color: #162644;
+      transition: .2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .answer-btn:hover {
+      border-color: #1769d4;
+      background: #f2f7ff;
+    }
+
+    .answer-letter {
+      min-width: 34px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #edf1f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .answer-btn.correct {
+      border-color: #18a558;
+      background: #eafaf1;
+    }
+
+    .answer-btn.wrong {
+      border-color: #e6243f;
+      background: #fff0f2;
+    }
+
+    .result-box {
+      display: none;
+      text-align: center;
+    }
+
+    .result-trophy {
+      font-size: 66px;
+    }
+
+    .result-box h2 {
+      margin: 7px 0;
+      font-size: 31px;
+    }
+
+    .final-score {
+      font-size: 55px;
+      color: #e91f35;
+      font-weight: 900;
+      margin: 12px 0;
+    }
+
+    .final-message {
+      color: #637086;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .ranking {
+      margin-top: 20px;
+      text-align: left;
+      background: #f3f6fa;
+      border-radius: 16px;
+      padding: 15px;
+    }
+
+    .ranking h3 {
+      text-align: center;
+      margin-top: 3px;
+    }
+
+    .rank-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px;
+      border-bottom: 1px solid #dfe5ee;
+    }
+
+    .rank-row:last-child {
+      border-bottom: 0;
+    }
+
+    .rank-number {
+      font-weight: 900;
+      color: #e91f35;
+    }
+
+    .rank-score {
+      font-weight: 900;
+      color: #1266d5;
+    }
+
+    .locked-message {
+      text-align: center;
+      background: rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 12px;
+      color: #ffd94d;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      margin-top: 28px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      transform: translate(-50%, 20px);
+      background: #111;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 999px;
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 520px) {
       .actions {
         grid-template-columns: 1fr;
       }
 
-      .btn-primary {
+      .quiz-button {
         grid-column: auto;
       }
 
-      .wrap {
-        padding-left: 10px;
-        padding-right: 10px;
+      .quiz-section {
+        padding: 17px;
       }
 
-      .poster-shell {
-        border-radius: 18px;
+      .question-text {
+        font-size: 21px;
       }
-
     }
-
   </style>
 </head>
-
 
 <body>
 
   <main class="wrap">
 
-    <!-- HEADER -->
-
-    <section class="top">
-
-      <div class="eyebrow">
-        Birthday Invitation
+    <header class="top">
+      <div class="eyebrow">You're Invited!</div>
+      <h1>Rhyne Ken Turns 2! 🎉</h1>
+      <div class="subtitle">
+        Sunday • August 30, 2026 • 6:00 PM
       </div>
+    </header>
 
-      <h1>
-        Rhyne Ken L. Mercado is turning 2! 🎉
-      </h1>
-
-      <p>
-        Tap the invitation or the buttons below for details.
-      </p>
-
-    </section>
-
-
-    <!-- INVITATION -->
-
-    <section
-      class="poster-shell"
-      aria-label="Rhyne Ken L. Mercado Birthday Invitation"
-    >
-
+    <!-- INVITATION PHOTO -->
+    <section class="poster-shell">
       <img
-        class="poster"
         src="invitation.png"
-        alt="Rhyne Ken L. Mercado 2nd Birthday Invitation"
-      >
-
-      <!-- CLICKABLE AREA ON POSTER -->
-
-      <a
-        class="poster-location-link"
-        href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
-        target="_blank"
-        rel="noopener"
-        aria-label="View Masskara Chicken Inasal Location"
-      >
-        View Location
-      </a>
-
+        class="poster"
+        alt="Rhyne Ken L. Mercado Birthday Invitation"
+      />
     </section>
-
 
     <!-- BUTTONS -->
-
-    <section
-      class="actions"
-      aria-label="Invitation Actions"
-    >
-
-      <!-- LOCATION -->
+    <section class="actions">
 
       <a
         class="btn btn-primary"
         href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
         target="_blank"
-        rel="noopener"
       >
         📍 View Location
       </a>
 
-
-      <!-- CALENDAR -->
-
       <a
-        class="btn btn-secondary"
-        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyne+Ken+L.+Mercado+-+2nd+Birthday&dates=20260830T100000Z%2F20260830T130000Z&details=You+are+invited+to+Rhyne+Ken+L.+Mercado%27s+2nd+Birthday+Celebration.&location=Masskara+Chicken+Inasal%2C+La+Salle+Avenue%2C+Villamonte%2C+Bacolod+City"
+        class="btn btn-blue"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyne+Ken+L.+Mercado+-+2nd+Birthday&dates=20260830T180000%2F20260830T210000&ctz=Asia%2FManila&details=You+are+invited+to+Rhyne+Ken+L.+Mercado%27s+2nd+Birthday+Celebration.&location=Masskara+Chicken+Inasal%2C+La+Salle+Avenue%2C+Villamonte%2C+Bacolod+City"
         target="_blank"
-        rel="noopener"
       >
         📅 Add to Calendar
       </a>
 
-
-      <!-- SHARE -->
-
       <button
-        class="btn btn-secondary"
+        class="btn btn-dark"
         id="shareBtn"
         type="button"
       >
         📤 Share Invitation
       </button>
 
+      <button
+        class="btn quiz-button locked"
+        id="startQuizButton"
+        type="button"
+      >
+        🕷️ Start Quiz
+      </button>
+
     </section>
 
-
     <!-- DETAILS -->
-
     <section class="details">
 
       <div class="detail">
-
-        <div class="icon">
-          🎂
-        </div>
-
+        <div class="icon">🎂</div>
         <div>
-
-          <b>
-            Celebrant
-          </b>
-
-          <span>
-            Rhyne Ken L. Mercado
-            <br>
-            2nd Birthday
-          </span>
-
+          <b>Celebrant</b>
+          <span>Rhyne Ken L. Mercado • 2nd Birthday</span>
         </div>
+      </div>
+
+      <div class="detail">
+        <div class="icon">📅</div>
+        <div>
+          <b>Date & Time</b>
+          <span>Sunday, August 30, 2026 • 6:00 PM</span>
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="icon">🕷️</div>
+        <div>
+          <b>Birthday Quiz</b>
+          <span>Quiz opens at 7:30 PM • No time limit</span>
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="icon">📍</div>
+        <div>
+          <b>Venue</b>
+          <span>
+            Masskara Chicken Inasal<br>
+            La Salle Avenue, Villamonte, Bacolod City
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="locked-message" id="quizStatus">
+      🕷️ Ken's Birthday Quiz opens at 7:30 PM.
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <section class="quiz-section" id="quizSection">
+
+      <div class="quiz-header">
+        <div class="spider">🕷️🕸️</div>
+        <h2>How Well Do You Know Ken?</h2>
+        <p>
+          Answer all 10 questions and see if you can become
+          Ken's Birthday Quiz Champion!
+        </p>
+      </div>
+
+      <!-- LEADER -->
+      <div class="leader-card">
+        <div class="leader-label">🏆 CURRENT HIGHEST SCORE</div>
+        <div class="leader-name" id="leaderName">No player yet</div>
+        <div class="leader-score" id="leaderScore">
+          Be the first to play!
+        </div>
+      </div>
+
+      <!-- ENTER NAME -->
+      <div class="name-box" id="nameBox">
+        <h3>Enter Your Name</h3>
+        <p>Your name will appear with your final score.</p>
+
+        <input
+          id="guestName"
+          class="name-input"
+          type="text"
+          maxlength="40"
+          placeholder="Type your name here"
+          autocomplete="name"
+        />
+
+        <button
+          class="quiz-main-btn"
+          id="beginQuizBtn"
+          type="button"
+        >
+          Start Questions 🕷️
+        </button>
+      </div>
+
+      <!-- QUESTIONS -->
+      <div class="question-container" id="questionContainer">
+
+        <div class="progress-line">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="question-count" id="questionCount"></div>
+
+        <div class="question-text" id="questionText"></div>
+
+        <div class="answers" id="answers"></div>
 
       </div>
 
+      <!-- RESULT -->
+      <div class="result-box" id="resultBox">
 
-      <div class="detail">
+        <div class="result-trophy">🏆</div>
 
-        <div class="icon">
-          📅
+        <h2 id="resultName">Great Job!</h2>
+
+        <div class="final-score" id="finalScore">
+          0/10
         </div>
 
-        <div>
+        <div class="final-message" id="finalMessage"></div>
 
-          <b>
-            Date
-          </b>
-
-          <span>
-            Sunday, August 30, 2026
-          </span>
-
+        <div class="ranking">
+          <h3>🏆 Quiz Scores</h3>
+          <div id="rankingList"></div>
         </div>
 
-      </div>
+        <br>
 
-
-      <div class="detail">
-
-        <div class="icon">
-          🕕
-        </div>
-
-        <div>
-
-          <b>
-            Time
-          </b>
-
-          <span>
-            6:00 PM
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="detail">
-
-        <div class="icon">
-          📍
-        </div>
-
-        <div>
-
-          <b>
-            Venue
-          </b>
-
-          <span>
-            Masskara Chicken Inasal
-            <br>
-            La Salle Avenue, Villamonte
-            <br>
-            Bacolod City
-          </span>
-
-        </div>
+        <button
+          class="quiz-main-btn"
+          id="playAgainBtn"
+          type="button"
+        >
+          Play Again
+        </button>
 
       </div>
 
     </section>
 
-
-    <!-- COUNTDOWN -->
-
-    <div
-      class="countdown"
-      id="countdown"
-      aria-live="polite"
-    ></div>
-
-
-    <p class="note">
-
-      🎉 We can't wait to celebrate
-      Rhyne Ken's special day with you!
-
-    </p>
+    <footer>
+      Made with ❤️ for Rhyne Ken L. Mercado's 2nd Birthday
+    </footer>
 
   </main>
+
+  <div class="toast" id="toast"></div>
 
 
   <script>
 
-    /* ===========================
-       SHARE INVITATION
-    =========================== */
+    /* =====================================
+       QUIZ OPENING TIME
+       August 30, 2026 - 7:30 PM
+       Philippine Time
+    ===================================== */
 
-    const shareBtn =
-      document.getElementById("shareBtn");
-
-
-    shareBtn.addEventListener(
-      "click",
-      async () => {
-
-        const shareData = {
-
-          title:
-            "Rhyne Ken L. Mercado's 2nd Birthday Invitation",
-
-          text:
-            "🎉 You're invited to Rhyne Ken L. Mercado's 2nd Birthday!\n\n" +
-
-            "📅 Sunday, August 30, 2026\n" +
-
-            "🕕 6:00 PM\n\n" +
-
-            "📍 Masskara Chicken Inasal\n" +
-
-            "La Salle Avenue, Villamonte, Bacolod City\n\n" +
-
-            "🗺️ View Location:\n" +
-
-            "https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City",
-
-          url:
-            window.location.href
-
-        };
+    const QUIZ_START =
+      new Date("2026-08-30T19:30:00+08:00").getTime();
 
 
-        if (navigator.share) {
+    /* =====================================
+       QUIZ QUESTIONS
+    ===================================== */
 
-          try {
+    const quizQuestions = [
 
-            await navigator.share(
-              shareData
-            );
+      {
+        question: "What time was Ken born?",
+        choices: [
+          "11:15 AM",
+          "11:25 AM",
+          "11:35 AM",
+          "11:45 AM"
+        ],
+        answer: 2
+      },
 
-          }
-          catch (error) {
+      {
+        question: "Where was Ken born?",
+        choices: [
+          "Pulupandan",
+          "Valladolid",
+          "San Enrique",
+          "Bago City"
+        ],
+        answer: 1
+      },
 
-            console.log(
-              "Sharing cancelled.",
-              error
-            );
+      {
+        question: "Who is Ken's favorite superhero?",
+        choices: [
+          "Superman",
+          "Iron Man",
+          "Batman",
+          "Spiderman"
+        ],
+        answer: 3
+      },
 
-          }
+      {
+        question: "How tall is Ken now?",
+        choices: [
+          "79 cm",
+          "80 cm",
+          "81 cm",
+          "82 cm"
+        ],
+        answer: 2
+      },
 
-        }
-        else {
+      {
+        question: "What is Ken's current weight?",
+        choices: [
+          "13 kg",
+          "14 kg",
+          "15 kg",
+          "16 kg"
+        ],
+        answer: 2
+      },
 
-          const messengerUrl =
-            "https://www.facebook.com/dialog/send";
+      {
+        question: "What is Ken's foot size?",
+        choices: [
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        answer: 2
+      },
 
-          window.open(
-            messengerUrl,
-            "_blank"
+      {
+        question: "What is Ken's favorite food?",
+        choices: [
+          "Potatoes",
+          "Carrots",
+          "Broccoli",
+          "Corn"
+        ],
+        answer: 1
+      },
+
+      {
+        question: "What is Ken's favorite song?",
+        choices: [
+          "The Wheels on the Bus",
+          "Old MacDonald Had a Farm",
+          "Twinkle Twinkle Little Star",
+          "Baby Shark"
+        ],
+        answer: 0
+      },
+
+      {
+        question: "What is Ken's shirt size?",
+        choices: [
+          "18M",
+          "24M",
+          "2T",
+          "3T"
+        ],
+        answer: 2
+      },
+
+      {
+        question: "What is Ken's favorite toy?",
+        choices: [
+          "Train",
+          "Airplane",
+          "Truck",
+          "Car"
+        ],
+        answer: 3
+      }
+
+    ];
+
+
+    /* =====================================
+       ELEMENTS
+    ===================================== */
+
+    const startQuizButton =
+      document.getElementById("startQuizButton");
+
+    const quizSection =
+      document.getElementById("quizSection");
+
+    const quizStatus =
+      document.getElementById("quizStatus");
+
+    const guestName =
+      document.getElementById("guestName");
+
+    const beginQuizBtn =
+      document.getElementById("beginQuizBtn");
+
+    const nameBox =
+      document.getElementById("nameBox");
+
+    const questionContainer =
+      document.getElementById("questionContainer");
+
+    const questionCount =
+      document.getElementById("questionCount");
+
+    const questionText =
+      document.getElementById("questionText");
+
+    const answers =
+      document.getElementById("answers");
+
+    const progressFill =
+      document.getElementById("progressFill");
+
+    const resultBox =
+      document.getElementById("resultBox");
+
+    const resultName =
+      document.getElementById("resultName");
+
+    const finalScore =
+      document.getElementById("finalScore");
+
+    const finalMessage =
+      document.getElementById("finalMessage");
+
+    const rankingList =
+      document.getElementById("rankingList");
+
+    const leaderName =
+      document.getElementById("leaderName");
+
+    const leaderScore =
+      document.getElementById("leaderScore");
+
+    const playAgainBtn =
+      document.getElementById("playAgainBtn");
+
+    const countdown =
+      document.getElementById("countdown");
+
+    const toast =
+      document.getElementById("toast");
+
+
+    let currentQuestion = 0;
+    let score = 0;
+    let playerName = "";
+
+
+    /* =====================================
+       QUIZ LOCK / UNLOCK
+    ===================================== */
+
+    function checkQuizOpening() {
+
+      const now = Date.now();
+
+      if (now >= QUIZ_START) {
+
+        startQuizButton.classList.remove("locked");
+
+        startQuizButton.innerHTML =
+          "🕷️ Start Quiz";
+
+        quizStatus.innerHTML =
+          "🎉 Ken's Birthday Quiz is now OPEN!";
+
+      } else {
+
+        startQuizButton.classList.add("locked");
+
+        const difference = QUIZ_START - now;
+
+        const hours =
+          Math.floor(difference / (1000 * 60 * 60));
+
+        const minutes =
+          Math.floor(
+            (difference % (1000 * 60 * 60))
+            / (1000 * 60)
           );
 
+        const seconds =
+          Math.floor(
+            (difference % (1000 * 60))
+            / 1000
+          );
+
+        startQuizButton.innerHTML =
+          `🔒 Quiz Opens 7:30 PM`;
+
+        quizStatus.innerHTML =
+          `🕷️ Quiz opens at 7:30 PM
+          • ${hours}h ${minutes}m ${seconds}s remaining`;
+
+      }
+    }
+
+
+    setInterval(checkQuizOpening, 1000);
+
+    checkQuizOpening();
+
+
+    /* =====================================
+       START QUIZ BUTTON
+    ===================================== */
+
+    startQuizButton.addEventListener(
+      "click",
+      function() {
+
+        if (Date.now() < QUIZ_START) {
+
+          showToast(
+            "Quiz opens at 7:30 PM."
+          );
+
+          return;
+        }
+
+        quizSection.classList.add("active");
+
+        quizSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        loadLeader();
+
+      }
+    );
+
+
+    /* =====================================
+       ENTER NAME
+    ===================================== */
+
+    beginQuizBtn.addEventListener(
+      "click",
+      function() {
+
+        const name =
+          guestName.value.trim();
+
+        if (!name) {
+
+          showToast(
+            "Please enter your name first."
+          );
+
+          guestName.focus();
+
+          return;
+        }
+
+        playerName = name;
+
+        currentQuestion = 0;
+        score = 0;
+
+        nameBox.style.display = "none";
+        resultBox.style.display = "none";
+        questionContainer.style.display = "block";
+
+        showQuestion();
+
+      }
+    );
+
+
+    guestName.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          beginQuizBtn.click();
         }
 
       }
     );
 
 
-    /* ===========================
-       COUNTDOWN
-       August 30, 2026 - 6 PM
-       Philippines UTC+8
-    =========================== */
+    /* =====================================
+       DISPLAY QUESTION
+    ===================================== */
 
-    const countdown =
-      document.getElementById(
-        "countdown"
-      );
+    function showQuestion() {
 
+      const data =
+        quizQuestions[currentQuestion];
 
-    function updateCountdown() {
+      questionCount.textContent =
+        `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
 
-      const birthday =
-        new Date(
-          "2026-08-30T18:00:00+08:00"
-        );
+      questionText.textContent =
+        data.question;
 
+      const progress =
+        ((currentQuestion + 1)
+          / quizQuestions.length) * 100;
 
-      const now =
-        new Date();
+      progressFill.style.width =
+        progress + "%";
 
+      answers.innerHTML = "";
 
-      let difference =
-        birthday - now;
+      const letters =
+        ["A", "B", "C", "D"];
 
+      data.choices.forEach(
+        (choice, index) => {
 
-      if (difference <= 0) {
+          const button =
+            document.createElement("button");
 
-        const birthdayEnd =
-          new Date(
-            "2026-08-31T00:00:00+08:00"
+          button.className =
+            "answer-btn";
+
+          button.innerHTML =
+            `
+            <span class="answer-letter">
+              ${letters[index]}
+            </span>
+
+            <span>
+              ${choice}
+            </span>
+            `;
+
+          button.addEventListener(
+            "click",
+            function() {
+
+              selectAnswer(
+                index,
+                button
+              );
+
+            }
           );
 
-
-        if (now < birthdayEnd) {
-
-          countdown.textContent =
-            "🎉 It's Rhyne Ken's birthday today!";
+          answers.appendChild(button);
 
         }
-        else {
+      );
 
-          countdown.textContent =
-            "🎉 Thank you for celebrating with Rhyne Ken!";
+    }
 
+
+    /* =====================================
+       SELECT ANSWER
+    ===================================== */
+
+    function selectAnswer(
+      selectedIndex,
+      selectedButton
+    ) {
+
+      const question =
+        quizQuestions[currentQuestion];
+
+      const buttons =
+        document.querySelectorAll(
+          ".answer-btn"
+        );
+
+      buttons.forEach(
+        button => {
+          button.disabled = true;
         }
+      );
 
-        return;
+      if (
+        selectedIndex ===
+        question.answer
+      ) {
+
+        score++;
+
+        selectedButton.classList.add(
+          "correct"
+        );
+
+      } else {
+
+        selectedButton.classList.add(
+          "wrong"
+        );
+
+        buttons[
+          question.answer
+        ].classList.add(
+          "correct"
+        );
 
       }
 
+      setTimeout(
+        function() {
+
+          currentQuestion++;
+
+          if (
+            currentQuestion <
+            quizQuestions.length
+          ) {
+
+            showQuestion();
+
+          } else {
+
+            finishQuiz();
+
+          }
+
+        },
+        700
+      );
+
+    }
+
+
+    /* =====================================
+       FINISH QUIZ
+    ===================================== */
+
+    function finishQuiz() {
+
+      questionContainer.style.display =
+        "none";
+
+      resultBox.style.display =
+        "block";
+
+      resultName.textContent =
+        `Great Job, ${playerName}!`;
+
+      finalScore.textContent =
+        `${score}/10`;
+
+      let message = "";
+
+      if (score === 10) {
+
+        message =
+          "🎉 PERFECT SCORE! You really know Ken very well!";
+
+      } else if (score >= 8) {
+
+        message =
+          "🕷️ Amazing! You know Ken very well!";
+
+      } else if (score >= 6) {
+
+        message =
+          "👏 Great job! You know a lot about Ken!";
+
+      } else if (score >= 4) {
+
+        message =
+          "😊 Nice try! You learned more about Ken today!";
+
+      } else {
+
+        message =
+          "🎂 Thanks for playing Ken's birthday quiz!";
+
+      }
+
+      finalMessage.textContent =
+        message;
+
+      saveScore(
+        playerName,
+        score
+      );
+
+      displayRanking();
+
+      loadLeader();
+
+    }
+
+
+    /* =====================================
+       SAVE SCORE
+
+       IMPORTANT:
+       GitHub Pages is a static website.
+       This stores scores in the current
+       guest's phone/browser only.
+    ===================================== */
+
+    function getScores() {
+
+      try {
+
+        return JSON.parse(
+          localStorage.getItem(
+            "kenBirthdayQuizScores"
+          )
+        ) || [];
+
+      } catch (error) {
+
+        return [];
+
+      }
+
+    }
+
+
+    function saveScore(
+      name,
+      playerScore
+    ) {
+
+      let scores =
+        getScores();
+
+      const existing =
+        scores.find(
+          item =>
+            item.name.toLowerCase() ===
+            name.toLowerCase()
+        );
+
+      if (existing) {
+
+        if (
+          playerScore >
+          existing.score
+        ) {
+
+          existing.score =
+            playerScore;
+
+        }
+
+      } else {
+
+        scores.push({
+          name: name,
+          score: playerScore
+        });
+
+      }
+
+      scores.sort(
+        (a, b) =>
+          b.score - a.score
+      );
+
+      scores =
+        scores.slice(0, 20);
+
+      localStorage.setItem(
+        "kenBirthdayQuizScores",
+        JSON.stringify(scores)
+      );
+
+    }
+
+
+    /* =====================================
+       HIGHEST SCORER
+    ===================================== */
+
+    function loadLeader() {
+
+      const scores =
+        getScores();
+
+      if (!scores.length) {
+
+        leaderName.textContent =
+          "No player yet";
+
+        leaderScore.textContent =
+          "Be the first to play!";
+
+        return;
+      }
+
+      leaderName.textContent =
+        `🏆 ${scores[0].name}`;
+
+      leaderScore.textContent =
+        `${scores[0].score} out of 10`;
+
+    }
+
+
+    /* =====================================
+       SCORE LIST
+    ===================================== */
+
+    function displayRanking() {
+
+      const scores =
+        getScores();
+
+      rankingList.innerHTML = "";
+
+      if (!scores.length) {
+
+        rankingList.innerHTML =
+          "<p>No scores yet.</p>";
+
+        return;
+      }
+
+      scores.forEach(
+        (item, index) => {
+
+          const row =
+            document.createElement("div");
+
+          row.className =
+            "rank-row";
+
+          let medal =
+            `${index + 1}.`;
+
+          if (index === 0)
+            medal = "🥇";
+
+          if (index === 1)
+            medal = "🥈";
+
+          if (index === 2)
+            medal = "🥉";
+
+          row.innerHTML =
+            `
+            <span>
+              <span class="rank-number">
+                ${medal}
+              </span>
+              ${item.name}
+            </span>
+
+            <span class="rank-score">
+              ${item.score}/10
+            </span>
+            `;
+
+          rankingList.appendChild(row);
+
+        }
+      );
+
+    }
+
+
+    /* =====================================
+       PLAY AGAIN
+    ===================================== */
+
+    playAgainBtn.addEventListener(
+      "click",
+      function() {
+
+        resultBox.style.display =
+          "none";
+
+        nameBox.style.display =
+          "block";
+
+        guestName.value = "";
+
+        guestName.focus();
+
+      }
+    );
+
+
+    /* =====================================
+       BIRTHDAY COUNTDOWN
+    ===================================== */
+
+    function updateCountdown() {
+
+      const birthdayStart =
+        new Date(
+          "2026-08-30T18:00:00+08:00"
+        ).getTime();
+
+      const now =
+        Date.now();
+
+      const difference =
+        birthdayStart - now;
+
+      if (difference <= 0) {
+
+        countdown.innerHTML =
+          "🎉 It's Rhyne Ken's Birthday Celebration!";
+
+        return;
+      }
 
       const days =
         Math.floor(
@@ -693,46 +1473,123 @@
           (1000 * 60 * 60 * 24)
         );
 
-
-      difference %=
-        (1000 * 60 * 60 * 24);
-
-
       const hours =
         Math.floor(
-          difference /
+          (difference %
+          (1000 * 60 * 60 * 24))
+          /
           (1000 * 60 * 60)
         );
 
-
-      difference %=
-        (1000 * 60 * 60);
-
-
       const minutes =
         Math.floor(
-          difference /
+          (difference %
+          (1000 * 60 * 60))
+          /
           (1000 * 60)
         );
 
-
-      countdown.textContent =
-        "⏳ " +
-        days + "d " +
-        hours + "h " +
-        minutes + "m " +
-        "until Rhyne Ken's birthday!";
+      countdown.innerHTML =
+        `⏳ ${days}d ${hours}h ${minutes}m until Ken's birthday celebration!`;
 
     }
 
 
     updateCountdown();
 
-
     setInterval(
       updateCountdown,
       60000
     );
+
+
+    /* =====================================
+       SHARE INVITATION
+    ===================================== */
+
+    document
+      .getElementById("shareBtn")
+      .addEventListener(
+        "click",
+        async function() {
+
+          const shareData = {
+
+            title:
+              "Rhyne Ken's 2nd Birthday",
+
+            text:
+              "🎉 You're invited to Rhyne Ken L. Mercado's 2nd Birthday Celebration on August 30, 2026 at 6:00 PM!",
+
+            url:
+              window.location.href
+
+          };
+
+          try {
+
+            if (
+              navigator.share
+            ) {
+
+              await navigator.share(
+                shareData
+              );
+
+            } else {
+
+              await navigator.clipboard.writeText(
+                window.location.href
+              );
+
+              showToast(
+                "Invitation link copied!"
+              );
+
+            }
+
+          } catch (error) {
+
+            console.log(error);
+
+          }
+
+        }
+      );
+
+
+    /* =====================================
+       TOAST MESSAGE
+    ===================================== */
+
+    function showToast(message) {
+
+      toast.textContent =
+        message;
+
+      toast.classList.add(
+        "show"
+      );
+
+      setTimeout(
+        function() {
+
+          toast.classList.remove(
+            "show"
+          );
+
+        },
+        2500
+      );
+
+    }
+
+
+    /* INITIALIZE */
+
+    loadLeader();
+
+    displayRanking();
 
   </script>
 
