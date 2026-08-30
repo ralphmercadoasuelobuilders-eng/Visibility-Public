@@ -6,500 +6,250 @@
 
   <title>Rhyne Ken's 2nd Birthday Invitation</title>
 
-  <meta
-    name="description"
-    content="You're invited to Rhyne Ken L. Mercado's 2nd Birthday Celebration."
-  />
-
   <style>
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 15% 5%, rgba(239, 35, 60, .28), transparent 25rem),
-        radial-gradient(circle at 90% 20%, rgba(20, 90, 220, .32), transparent 28rem),
-        linear-gradient(180deg, #07152e, #0c2b5a 55%, #061327);
+        radial-gradient(circle at top left, rgba(255, 0, 0, 0.28), transparent 35%),
+        radial-gradient(circle at top right, rgba(0, 100, 255, 0.32), transparent 35%),
+        linear-gradient(180deg, #07182e, #0b2f62, #061429);
       color: white;
       min-height: 100vh;
     }
 
-    .wrap {
-      width: min(100%, 760px);
+    .container {
+      width: 100%;
+      max-width: 760px;
       margin: auto;
-      padding: 18px 14px 50px;
+      padding: 15px;
     }
 
-    .top {
+    .header {
       text-align: center;
-      padding: 8px 5px 16px;
+      margin-bottom: 15px;
     }
 
-    .eyebrow {
-      color: #ffd633;
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+    .header h1 {
+      margin: 8px 0;
+      font-size: 32px;
     }
 
-    h1 {
-      margin: 8px 0 5px;
-      font-size: clamp(25px, 7vw, 42px);
+    .header p {
+      color: #ddd;
+      margin: 5px 0;
     }
 
-    .subtitle {
-      color: rgba(255,255,255,.82);
-      font-size: 15px;
-    }
-
-    .poster-shell {
+    .poster-box {
       background: white;
-      border-radius: 24px;
+      border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 22px 55px rgba(0,0,0,.38);
+      box-shadow: 0 10px 35px rgba(0,0,0,.45);
     }
 
-    .poster {
+    .poster-box img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    .actions {
+    .buttons {
       display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 16px 0;
+      margin-top: 15px;
     }
 
     .btn {
-      border: 0;
-      border-radius: 16px;
-      padding: 15px 12px;
-      text-decoration: none;
-      text-align: center;
-      font-size: 15px;
-      font-weight: 900;
-      cursor: pointer;
-      transition: .2s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 52px;
-    }
-
-    .btn:active {
-      transform: scale(.97);
-    }
-
-    .btn-primary {
-      background: #e91f35;
-      color: white;
-    }
-
-    .btn-blue {
-      background: #0864d8;
-      color: white;
-    }
-
-    .btn-yellow {
-      background: #ffd632;
-      color: #08152e;
-    }
-
-    .btn-dark {
-      background: #172947;
-      color: white;
-      border: 1px solid rgba(255,255,255,.15);
-    }
-
-    .quiz-button {
-      grid-column: 1 / -1;
-      font-size: 18px;
-      background: linear-gradient(135deg, #ffce22, #ff8c00);
-      color: #07152e;
-      box-shadow: 0 8px 24px rgba(255,175,0,.25);
-    }
-
-    .quiz-button.locked {
-      opacity: .55;
-      cursor: not-allowed;
-      filter: grayscale(.3);
-    }
-
-    .details {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 20px;
-      padding: 8px 16px;
-      margin: 16px 0;
-      backdrop-filter: blur(8px);
-    }
-
-    .detail {
-      display: flex;
-      gap: 12px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,.09);
-    }
-
-    .detail:last-child {
-      border-bottom: 0;
-    }
-
-    .detail .icon {
-      width: 35px;
-      font-size: 24px;
-    }
-
-    .detail b {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .detail span {
-      color: rgba(255,255,255,.78);
-      line-height: 1.45;
-    }
-
-    .countdown {
-      text-align: center;
-      background: rgba(255,214,50,.12);
-      border: 1px solid rgba(255,214,50,.28);
-      color: #ffe46d;
-      padding: 13px;
-      border-radius: 16px;
-      margin: 14px 0;
-      font-weight: 800;
-    }
-
-    /* QUIZ */
-
-    .quiz-section {
-      display: none;
-      margin-top: 25px;
-      background: rgba(255,255,255,.96);
-      color: #11213d;
-      border-radius: 26px;
-      padding: 22px;
-      box-shadow: 0 25px 55px rgba(0,0,0,.35);
-    }
-
-    .quiz-section.active {
-      display: block;
-      animation: fadeIn .35s ease;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .quiz-header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .quiz-header .spider {
-      font-size: 45px;
-    }
-
-    .quiz-header h2 {
-      margin: 5px 0;
-      color: #d91e36;
-      font-size: 30px;
-    }
-
-    .quiz-header p {
-      color: #637086;
-      margin: 5px 0;
-      line-height: 1.5;
-    }
-
-    .leader-card {
-      background: linear-gradient(135deg, #091c3b, #113e7b);
-      color: white;
-      border-radius: 18px;
-      padding: 17px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .leader-label {
-      color: #ffd632;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .1em;
-    }
-
-    .leader-name {
-      font-size: 24px;
-      font-weight: 900;
-      margin: 7px 0 2px;
-    }
-
-    .leader-score {
-      color: rgba(255,255,255,.75);
-      font-size: 14px;
-    }
-
-    .name-box {
-      text-align: center;
-      padding: 5px 0 10px;
-    }
-
-    .name-box h3 {
-      font-size: 23px;
-      margin: 8px 0;
-    }
-
-    .name-box p {
-      color: #657187;
-    }
-
-    .name-input {
-      width: 100%;
-      border: 2px solid #d8deea;
+      border: none;
       border-radius: 14px;
-      padding: 15px;
-      font-size: 17px;
-      outline: none;
-      margin: 10px 0 12px;
-      text-align: center;
-    }
-
-    .name-input:focus {
-      border-color: #1568d4;
-    }
-
-    .quiz-main-btn {
-      width: 100%;
-      border: 0;
-      border-radius: 15px;
-      padding: 15px;
-      font-size: 17px;
-      font-weight: 900;
+      padding: 15px 10px;
+      font-size: 16px;
+      font-weight: bold;
       cursor: pointer;
-      background: linear-gradient(135deg, #e91f35, #b90926);
+      text-align: center;
+      text-decoration: none;
       color: white;
+      min-height: 50px;
     }
 
-    .quiz-main-btn:active {
-      transform: scale(.98);
+    .blue {
+      background: #0568d8;
     }
 
-    .question-container {
-      display: none;
+    .red {
+      background: #d91d2b;
     }
 
-    .progress-line {
-      height: 8px;
-      background: #e7ebf2;
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 18px;
+    .yellow {
+      background: #f3bd1c;
+      color: #111;
     }
 
-    .progress-fill {
-      height: 100%;
-      width: 10%;
-      background: linear-gradient(90deg, #e91f35, #1165d8);
-      transition: width .3s;
+    .green {
+      background: #138f48;
     }
 
-    .question-count {
-      color: #6a7588;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 9px;
+    .purple {
+      background: #6b35c5;
     }
 
-    .question-text {
-      font-size: 24px;
-      font-weight: 900;
-      line-height: 1.3;
-      margin-bottom: 18px;
-      color: #12233f;
+    .orange {
+      background: #ec7a14;
     }
 
-    .answers {
-      display: grid;
-      gap: 11px;
+    .full {
+      grid-column: 1 / -1;
     }
 
-    .answer-btn {
+    .section {
+      margin-top: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    input {
       width: 100%;
-      border: 2px solid #dfe4ec;
-      background: #fff;
-      border-radius: 15px;
-      padding: 15px;
-      text-align: left;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .quiz-question {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .choice {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 12px;
+      background: white;
+      color: #111;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 16px;
-      font-weight: 700;
-      color: #162644;
-      transition: .2s;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .answer-btn:hover {
-      border-color: #1769d4;
-      background: #f2f7ff;
-    }
-
-    .answer-letter {
-      min-width: 34px;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #edf1f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .answer-btn.correct {
-      border-color: #18a558;
-      background: #eafaf1;
-    }
-
-    .answer-btn.wrong {
-      border-color: #e6243f;
-      background: #fff0f2;
-    }
-
-    .result-box {
-      display: none;
-      text-align: center;
-    }
-
-    .result-trophy {
-      font-size: 66px;
-    }
-
-    .result-box h2 {
-      margin: 7px 0;
-      font-size: 31px;
-    }
-
-    .final-score {
-      font-size: 55px;
-      color: #e91f35;
-      font-weight: 900;
-      margin: 12px 0;
-    }
-
-    .final-message {
-      color: #637086;
-      font-size: 16px;
-      line-height: 1.55;
-    }
-
-    .ranking {
-      margin-top: 20px;
       text-align: left;
-      background: #f3f6fa;
-      border-radius: 16px;
-      padding: 15px;
     }
 
-    .ranking h3 {
+    .choice:hover {
+      background: #eaf2ff;
+    }
+
+    .score {
       text-align: center;
-      margin-top: 3px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #ffd84b;
     }
 
-    .rank-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px;
-      border-bottom: 1px solid #dfe5ee;
-    }
-
-    .rank-row:last-child {
-      border-bottom: 0;
-    }
-
-    .rank-number {
-      font-weight: 900;
-      color: #e91f35;
-    }
-
-    .rank-score {
-      font-weight: 900;
-      color: #1266d5;
-    }
-
-    .locked-message {
-      text-align: center;
-      background: rgba(255,255,255,.08);
-      border-radius: 16px;
+    .leaderboard {
+      margin-top: 15px;
+      background: rgba(0,0,0,.2);
+      border-radius: 12px;
       padding: 12px;
-      color: #ffd94d;
-      font-size: 14px;
-      margin-bottom: 12px;
     }
 
-    footer {
-      text-align: center;
-      color: rgba(255,255,255,.55);
-      font-size: 12px;
-      margin-top: 28px;
+    .leaderboard-item {
+      padding: 8px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
     }
 
-    .toast {
-      position: fixed;
+    /* WHEEL */
+
+    .wheel-wrapper {
+      position: relative;
+      width: 310px;
+      height: 310px;
+      max-width: 90vw;
+      max-height: 90vw;
+      margin: 20px auto;
+    }
+
+    #wheel {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 8px solid white;
+      box-shadow: 0 0 25px rgba(0,0,0,.5);
+      transition: transform 5s cubic-bezier(.17,.67,.18,1);
+    }
+
+    .pointer {
+      position: absolute;
       left: 50%;
-      bottom: 25px;
-      transform: translate(-50%, 20px);
-      background: #111;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 999px;
-      opacity: 0;
-      pointer-events: none;
-      transition: .25s;
-      z-index: 9999;
+      top: -7px;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-top: 38px solid #ffd51f;
+      z-index: 5;
     }
 
-    .toast.show {
-      opacity: 1;
-      transform: translate(-50%, 0);
+    #winnerBox {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffd84b;
+      margin-top: 15px;
     }
 
-    @media (max-width: 520px) {
-      .actions {
+    .names-list {
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+
+    .admin-label {
+      background: #ffd51f;
+      color: #111;
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    @media(max-width:500px) {
+      .buttons {
         grid-template-columns: 1fr;
       }
 
-      .quiz-button {
+      .full {
         grid-column: auto;
       }
 
-      .quiz-section {
-        padding: 17px;
+      .header h1 {
+        font-size: 25px;
       }
 
-      .question-text {
-        font-size: 21px;
+      .wheel-wrapper {
+        width: 270px;
+        height: 270px;
       }
     }
   </style>
@@ -507,1091 +257,1246 @@
 
 <body>
 
-  <main class="wrap">
+<div class="container">
 
-    <header class="top">
-      <div class="eyebrow">You're Invited!</div>
-      <h1>Rhyne Ken Turns 2! 🎉</h1>
-      <div class="subtitle">
-        Sunday • August 30, 2026 • 6:00 PM
-      </div>
-    </header>
+  <div class="header">
+    <h1>🎉 Rhyne Ken is Turning 2! 🎂</h1>
+    <p>You are invited to celebrate with us!</p>
+  </div>
 
-    <!-- INVITATION PHOTO -->
-    <section class="poster-shell">
-      <img
-        src="invitation.png"
-        class="poster"
-        alt="Rhyne Ken L. Mercado Birthday Invitation"
-      />
-    </section>
+  <!-- INVITATION POSTER -->
+  <div class="poster-box">
+    <img src="invitation.png" alt="Rhyne Ken Birthday Invitation">
+  </div>
 
-    <!-- BUTTONS -->
-    <section class="actions">
+  <!-- MAIN BUTTONS -->
+  <div class="buttons">
 
-      <a
-        class="btn btn-primary"
-        href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
-        target="_blank"
-      >
-        📍 View Location
-      </a>
+    <a
+      class="btn blue"
+      href="https://www.google.com/maps/search/?api=1&query=Masskara+Chicken+Inasal+La+Salle+Avenue+Villamonte+Bacolod+City"
+      target="_blank">
+      📍 View Location
+    </a>
 
-      <a
-        class="btn btn-blue"
-        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyne+Ken+L.+Mercado+-+2nd+Birthday&dates=20260830T180000%2F20260830T210000&ctz=Asia%2FManila&details=You+are+invited+to+Rhyne+Ken+L.+Mercado%27s+2nd+Birthday+Celebration.&location=Masskara+Chicken+Inasal%2C+La+Salle+Avenue%2C+Villamonte%2C+Bacolod+City"
-        target="_blank"
-      >
-        📅 Add to Calendar
-      </a>
+    <a
+      class="btn green"
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rhyne+Ken+L.+Mercado+2nd+Birthday&dates=20260830T100000Z/20260830T130000Z&location=Masskara+Chicken+Inasal,+La+Salle+Avenue,+Villamonte,+Bacolod+City"
+      target="_blank">
+      📅 Add to Calendar
+    </a>
 
-      <button
-        class="btn btn-dark"
-        id="shareBtn"
-        type="button"
-      >
-        📤 Share Invitation
-      </button>
+    <button class="btn yellow" onclick="shareInvitation()">
+      📤 Share Invitation
+    </button>
 
-      <button
-        class="btn quiz-button locked"
-        id="startQuizButton"
-        type="button"
-      >
-        🕷️ Start Quiz
-      </button>
+    <button class="btn purple" onclick="openQuiz()">
+      🧠 Start Quiz
+    </button>
 
-    </section>
+    <button class="btn orange full" onclick="openSpinRegistration()">
+      🎡 Start Spin
+    </button>
 
-    <!-- DETAILS -->
-    <section class="details">
+  </div>
 
-      <div class="detail">
-        <div class="icon">🎂</div>
-        <div>
-          <b>Celebrant</b>
-          <span>Rhyne Ken L. Mercado • 2nd Birthday</span>
-        </div>
-      </div>
 
-      <div class="detail">
-        <div class="icon">📅</div>
-        <div>
-          <b>Date & Time</b>
-          <span>Sunday, August 30, 2026 • 6:00 PM</span>
-        </div>
-      </div>
+  <!-- QUIZ REGISTRATION -->
+  <div id="quizRegistration" class="section hidden">
 
-      <div class="detail">
-        <div class="icon">🕷️</div>
-        <div>
-          <b>Birthday Quiz</b>
-          <span>Quiz opens at 7:30 PM • No time limit</span>
-        </div>
-      </div>
+    <h2>🧠 Rhyne Ken Birthday Quiz</h2>
 
-      <div class="detail">
-        <div class="icon">📍</div>
-        <div>
-          <b>Venue</b>
-          <span>
-            Masskara Chicken Inasal<br>
-            La Salle Avenue, Villamonte, Bacolod City
-          </span>
-        </div>
-      </div>
+    <p style="text-align:center;">
+      Enter your name before starting.
+    </p>
 
-    </section>
+    <input
+      type="text"
+      id="quizName"
+      placeholder="Enter your name"
+      autocomplete="off">
 
-    <div class="countdown" id="countdown"></div>
+    <button class="btn purple full" onclick="startQuiz()">
+      Start Quiz
+    </button>
 
-    <div class="locked-message" id="quizStatus">
-      🕷️ Ken's Birthday Quiz opens at 7:30 PM.
+    <button class="btn red full" onclick="closeQuiz()">
+      Close
+    </button>
+
+  </div>
+
+
+  <!-- QUIZ -->
+  <div id="quizArea" class="section hidden">
+
+    <div id="quizProgress" style="text-align:center;margin-bottom:12px;"></div>
+
+    <div id="questionText" class="quiz-question"></div>
+
+    <div id="choices"></div>
+
+  </div>
+
+
+  <!-- QUIZ RESULTS -->
+  <div id="quizResult" class="section hidden">
+
+    <h2>🎉 Quiz Finished!</h2>
+
+    <div id="finalScore" class="score"></div>
+
+    <div class="leaderboard">
+
+      <h3 style="text-align:center;">
+        🏆 Quiz Leaderboard
+      </h3>
+
+      <div id="leaderboard"></div>
+
     </div>
 
-    <!-- QUIZ SECTION -->
-    <section class="quiz-section" id="quizSection">
+    <button class="btn purple full" onclick="closeQuiz()">
+      Done
+    </button>
 
-      <div class="quiz-header">
-        <div class="spider">🕷️🕸️</div>
-        <h2>How Well Do You Know Ken?</h2>
-        <p>
-          Answer all 10 questions and see if you can become
-          Ken's Birthday Quiz Champion!
-        </p>
-      </div>
+  </div>
 
-      <!-- LEADER -->
-      <div class="leader-card">
-        <div class="leader-label">🏆 CURRENT HIGHEST SCORE</div>
-        <div class="leader-name" id="leaderName">No player yet</div>
-        <div class="leader-score" id="leaderScore">
-          Be the first to play!
-        </div>
-      </div>
 
-      <!-- ENTER NAME -->
-      <div class="name-box" id="nameBox">
-        <h3>Enter Your Name</h3>
-        <p>Your name will appear with your final score.</p>
+  <!-- SPIN REGISTRATION -->
+  <div id="spinRegistration" class="section hidden">
 
-        <input
-          id="guestName"
-          class="name-input"
-          type="text"
-          maxlength="40"
-          placeholder="Type your name here"
-          autocomplete="name"
-        />
-
-        <button
-          class="quiz-main-btn"
-          id="beginQuizBtn"
-          type="button"
-        >
-          Start Questions 🕷️
-        </button>
-      </div>
-
-      <!-- QUESTIONS -->
-      <div class="question-container" id="questionContainer">
-
-        <div class="progress-line">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-
-        <div class="question-count" id="questionCount"></div>
-
-        <div class="question-text" id="questionText"></div>
-
-        <div class="answers" id="answers"></div>
-
-      </div>
-
-      <!-- RESULT -->
-      <div class="result-box" id="resultBox">
-
-        <div class="result-trophy">🏆</div>
-
-        <h2 id="resultName">Great Job!</h2>
-
-        <div class="final-score" id="finalScore">
-          0/10
-        </div>
-
-        <div class="final-message" id="finalMessage"></div>
-
-        <div class="ranking">
-          <h3>🏆 Quiz Scores</h3>
-          <div id="rankingList"></div>
-        </div>
-
-        <br>
-
-        <button
-          class="quiz-main-btn"
-          id="playAgainBtn"
-          type="button"
-        >
-          Play Again
-        </button>
-
-      </div>
-
-    </section>
-
-    <footer>
-      Made with ❤️ for Rhyne Ken L. Mercado's 2nd Birthday
-    </footer>
-
-  </main>
-
-  <div class="toast" id="toast"></div>
-
-
-  <script>
-
-    /* =====================================
-       QUIZ OPENING TIME
-       August 30, 2026 - 7:30 PM
-       Philippine Time
-    ===================================== */
-
-    const QUIZ_START =
-      new Date("2026-08-30T19:30:00+08:00").getTime();
-
-
-    /* =====================================
-       QUIZ QUESTIONS
-    ===================================== */
-
-    const quizQuestions = [
-
-      {
-        question: "What time was Ken born?",
-        choices: [
-          "11:15 AM",
-          "11:25 AM",
-          "11:35 AM",
-          "11:45 AM"
-        ],
-        answer: 2
-      },
-
-      {
-        question: "Where was Ken born?",
-        choices: [
-          "Pulupandan",
-          "Valladolid",
-          "San Enrique",
-          "Bago City"
-        ],
-        answer: 1
-      },
-
-      {
-        question: "Who is Ken's favorite superhero?",
-        choices: [
-          "Superman",
-          "Iron Man",
-          "Batman",
-          "Spiderman"
-        ],
-        answer: 3
-      },
-
-      {
-        question: "How tall is Ken now?",
-        choices: [
-          "79 cm",
-          "80 cm",
-          "81 cm",
-          "82 cm"
-        ],
-        answer: 2
-      },
-
-      {
-        question: "What is Ken's current weight?",
-        choices: [
-          "13 kg",
-          "14 kg",
-          "15 kg",
-          "16 kg"
-        ],
-        answer: 2
-      },
-
-      {
-        question: "What is Ken's foot size?",
-        choices: [
-          "24",
-          "25",
-          "26",
-          "27"
-        ],
-        answer: 2
-      },
-
-      {
-        question: "What is Ken's favorite food?",
-        choices: [
-          "Potatoes",
-          "Carrots",
-          "Broccoli",
-          "Corn"
-        ],
-        answer: 1
-      },
-
-      {
-        question: "What is Ken's favorite song?",
-        choices: [
-          "The Wheels on the Bus",
-          "Old MacDonald Had a Farm",
-          "Twinkle Twinkle Little Star",
-          "Baby Shark"
-        ],
-        answer: 0
-      },
-
-      {
-        question: "What is Ken's shirt size?",
-        choices: [
-          "18M",
-          "24M",
-          "2T",
-          "3T"
-        ],
-        answer: 2
-      },
-
-      {
-        question: "What is Ken's favorite toy?",
-        choices: [
-          "Train",
-          "Airplane",
-          "Truck",
-          "Car"
-        ],
-        answer: 3
-      }
-
-    ];
-
-
-    /* =====================================
-       ELEMENTS
-    ===================================== */
-
-    const startQuizButton =
-      document.getElementById("startQuizButton");
-
-    const quizSection =
-      document.getElementById("quizSection");
-
-    const quizStatus =
-      document.getElementById("quizStatus");
-
-    const guestName =
-      document.getElementById("guestName");
-
-    const beginQuizBtn =
-      document.getElementById("beginQuizBtn");
-
-    const nameBox =
-      document.getElementById("nameBox");
-
-    const questionContainer =
-      document.getElementById("questionContainer");
-
-    const questionCount =
-      document.getElementById("questionCount");
-
-    const questionText =
-      document.getElementById("questionText");
-
-    const answers =
-      document.getElementById("answers");
-
-    const progressFill =
-      document.getElementById("progressFill");
-
-    const resultBox =
-      document.getElementById("resultBox");
-
-    const resultName =
-      document.getElementById("resultName");
-
-    const finalScore =
-      document.getElementById("finalScore");
-
-    const finalMessage =
-      document.getElementById("finalMessage");
-
-    const rankingList =
-      document.getElementById("rankingList");
-
-    const leaderName =
-      document.getElementById("leaderName");
-
-    const leaderScore =
-      document.getElementById("leaderScore");
-
-    const playAgainBtn =
-      document.getElementById("playAgainBtn");
-
-    const countdown =
-      document.getElementById("countdown");
-
-    const toast =
-      document.getElementById("toast");
-
-
-    let currentQuestion = 0;
-    let score = 0;
-    let playerName = "";
-
-
-    /* =====================================
-       QUIZ LOCK / UNLOCK
-    ===================================== */
-
-    function checkQuizOpening() {
-
-      const now = Date.now();
-
-      if (now >= QUIZ_START) {
-
-        startQuizButton.classList.remove("locked");
-
-        startQuizButton.innerHTML =
-          "🕷️ Start Quiz";
-
-        quizStatus.innerHTML =
-          "🎉 Ken's Birthday Quiz is now OPEN!";
-
-      } else {
-
-        startQuizButton.classList.add("locked");
-
-        const difference = QUIZ_START - now;
-
-        const hours =
-          Math.floor(difference / (1000 * 60 * 60));
-
-        const minutes =
-          Math.floor(
-            (difference % (1000 * 60 * 60))
-            / (1000 * 60)
-          );
-
-        const seconds =
-          Math.floor(
-            (difference % (1000 * 60))
-            / 1000
-          );
-
-        startQuizButton.innerHTML =
-          `🔒 Quiz Opens 7:30 PM`;
-
-        quizStatus.innerHTML =
-          `🕷️ Quiz opens at 7:30 PM
-          • ${hours}h ${minutes}m ${seconds}s remaining`;
-
-      }
+    <h2>🎡 Birthday Spin the Wheel</h2>
+
+    <p style="text-align:center;">
+      Enter your name to join the wheel.
+    </p>
+
+    <input
+      type="text"
+      id="spinName"
+      placeholder="Enter your name"
+      autocomplete="off">
+
+    <button class="btn orange full" onclick="joinWheel()">
+      Join the Wheel
+    </button>
+
+    <button class="btn red full" onclick="closeSpin()">
+      Close
+    </button>
+
+  </div>
+
+
+  <!-- GUEST SUCCESS -->
+  <div id="joinedWheel" class="section hidden">
+
+    <h2>✅ You're In!</h2>
+
+    <p id="joinedMessage" style="text-align:center;font-size:20px;"></p>
+
+    <p style="text-align:center;color:#ddd;">
+      Your name has been added to the birthday wheel.
+    </p>
+
+    <button class="btn orange full" onclick="closeSpin()">
+      Done
+    </button>
+
+  </div>
+
+
+  <!-- ADMIN WHEEL -->
+  <div id="adminWheel" class="section hidden">
+
+    <div style="text-align:center;">
+      <span class="admin-label">
+        🔐 ADMIN MODE
+      </span>
+    </div>
+
+    <h2>🎡 Spin the Wheel</h2>
+
+    <div class="wheel-wrapper">
+
+      <div class="pointer"></div>
+
+      <canvas
+        id="wheel"
+        width="500"
+        height="500">
+      </canvas>
+
+    </div>
+
+    <button
+      id="spinButton"
+      class="btn orange full"
+      onclick="spinWheel()">
+      🎯 SPIN FOR A WINNER
+    </button>
+
+    <div id="winnerBox"></div>
+
+    <div class="names-list">
+      <strong>Guests in the Wheel:</strong>
+      <div id="wheelNames"></div>
+    </div>
+
+    <button
+      class="btn red full"
+      style="margin-top:15px;"
+      onclick="resetWheel()">
+      🗑 Reset Wheel Names
+    </button>
+
+    <button
+      class="btn blue full"
+      style="margin-top:10px;"
+      onclick="closeSpin()">
+      Close Admin
+    </button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+const quizQuestions = [
+
+  {
+    question: "1. What time was Ken born?",
+    answers: [
+      "11:25 AM",
+      "11:35 AM",
+      "11:45 AM",
+      "11:55 AM"
+    ],
+    correct: 1
+  },
+
+  {
+    question: "2. Where was Ken born?",
+    answers: [
+      "Victorias",
+      "Valladolid",
+      "Bago City",
+      "Bacolod City"
+    ],
+    correct: 1
+  },
+
+  {
+    question: "3. Who is Ken's favorite superhero?",
+    answers: [
+      "Iron Man",
+      "Batman",
+      "Spider-Man",
+      "Superman"
+    ],
+    correct: 2
+  },
+
+  {
+    question: "4. How tall is Ken now?",
+    answers: [
+      "79 cm",
+      "80 cm",
+      "81 cm",
+      "82 cm"
+    ],
+    correct: 2
+  },
+
+  {
+    question: "5. What is Ken's weight?",
+    answers: [
+      "13 kg",
+      "14 kg",
+      "15 kg",
+      "16 kg"
+    ],
+    correct: 2
+  },
+
+  {
+    question: "6. What is Ken's foot size?",
+    answers: [
+      "24",
+      "25",
+      "26",
+      "27"
+    ],
+    correct: 2
+  },
+
+  {
+    question: "7. What is Ken's favorite food?",
+    answers: [
+      "Potatoes",
+      "Broccoli",
+      "Corn",
+      "Carrots"
+    ],
+    correct: 3
+  },
+
+  {
+    question: "8. What is Ken's favorite song?",
+    answers: [
+      "Baby Shark",
+      "Wheels on the Bus",
+      "Twinkle Twinkle Little Star",
+      "Old MacDonald"
+    ],
+    correct: 1
+  },
+
+  {
+    question: "9. What is Ken's shirt size?",
+    answers: [
+      "18M",
+      "24M",
+      "2T",
+      "3T"
+    ],
+    correct: 2
+  },
+
+  {
+    question: "10. What is Ken's favorite toy?",
+    answers: [
+      "Airplane",
+      "Truck",
+      "Car",
+      "Train"
+    ],
+    correct: 2
+  }
+
+];
+
+let currentQuestion = 0;
+let quizScore = 0;
+let playerName = "";
+
+function openQuiz() {
+
+  /*
+    Quiz starts at 7:30 PM.
+    If you want to remove the restriction,
+    delete this date/time check.
+  */
+
+  const quizOpening =
+    new Date("2026-08-30T19:30:00+08:00");
+
+  const now = new Date();
+
+  if (now < quizOpening) {
+
+    alert(
+      "🕢 The Birthday Quiz will open at 7:30 PM."
+    );
+
+    return;
+  }
+
+  hideAllSections();
+
+  document
+    .getElementById("quizRegistration")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("quizName")
+    .focus();
+}
+
+
+function startQuiz() {
+
+  const name =
+    document
+      .getElementById("quizName")
+      .value
+      .trim();
+
+  if (!name) {
+
+    alert("Please enter your name.");
+
+    return;
+  }
+
+  playerName = name;
+
+  currentQuestion = 0;
+  quizScore = 0;
+
+  document
+    .getElementById("quizRegistration")
+    .classList.add("hidden");
+
+  document
+    .getElementById("quizArea")
+    .classList.remove("hidden");
+
+  showQuestion();
+}
+
+
+function showQuestion() {
+
+  const q =
+    quizQuestions[currentQuestion];
+
+  document
+    .getElementById("quizProgress")
+    .textContent =
+    "Question " +
+    (currentQuestion + 1) +
+    " of " +
+    quizQuestions.length;
+
+  document
+    .getElementById("questionText")
+    .textContent =
+    q.question;
+
+  const choices =
+    document.getElementById("choices");
+
+  choices.innerHTML = "";
+
+  q.answers.forEach(
+    (answer, index) => {
+
+      const button =
+        document.createElement("button");
+
+      button.className = "choice";
+
+      button.textContent =
+        String.fromCharCode(65 + index) +
+        ". " +
+        answer;
+
+      button.onclick =
+        () => selectAnswer(index);
+
+      choices.appendChild(button);
     }
+  );
+}
 
 
-    setInterval(checkQuizOpening, 1000);
+function selectAnswer(index) {
 
-    checkQuizOpening();
+  const question =
+    quizQuestions[currentQuestion];
+
+  if (index === question.correct) {
+    quizScore++;
+  }
+
+  currentQuestion++;
+
+  if (
+    currentQuestion <
+    quizQuestions.length
+  ) {
+
+    showQuestion();
+
+  } else {
+
+    finishQuiz();
+  }
+}
 
 
-    /* =====================================
-       START QUIZ BUTTON
-    ===================================== */
+function finishQuiz() {
 
-    startQuizButton.addEventListener(
-      "click",
-      function() {
+  document
+    .getElementById("quizArea")
+    .classList.add("hidden");
 
-        if (Date.now() < QUIZ_START) {
+  document
+    .getElementById("quizResult")
+    .classList.remove("hidden");
 
-          showToast(
-            "Quiz opens at 7:30 PM."
-          );
+  document
+    .getElementById("finalScore")
+    .innerHTML =
+    playerName +
+    "<br>" +
+    quizScore +
+    " / " +
+    quizQuestions.length;
 
-          return;
-        }
+  saveQuizScore(
+    playerName,
+    quizScore
+  );
 
-        quizSection.classList.add("active");
+  showLeaderboard();
+}
 
-        quizSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
 
-        loadLeader();
+function saveQuizScore(name, score) {
 
+  let scores =
+    JSON.parse(
+      localStorage.getItem(
+        "rhyneKenQuizScores"
+      ) || "[]"
+    );
+
+  scores.push({
+    name: name,
+    score: score,
+    time: Date.now()
+  });
+
+  scores.sort(
+    (a, b) => {
+
+      if (b.score !== a.score) {
+        return b.score - a.score;
       }
+
+      return a.time - b.time;
+    }
+  );
+
+  localStorage.setItem(
+    "rhyneKenQuizScores",
+    JSON.stringify(scores)
+  );
+}
+
+
+function showLeaderboard() {
+
+  const scores =
+    JSON.parse(
+      localStorage.getItem(
+        "rhyneKenQuizScores"
+      ) || "[]"
+    );
+
+  const board =
+    document.getElementById(
+      "leaderboard"
+    );
+
+  if (!scores.length) {
+
+    board.innerHTML =
+      "No scores yet.";
+
+    return;
+  }
+
+  board.innerHTML =
+    scores
+      .slice(0, 10)
+      .map(
+        (entry, index) => {
+
+          let medal = "";
+
+          if (index === 0) medal = "🥇 ";
+          if (index === 1) medal = "🥈 ";
+          if (index === 2) medal = "🥉 ";
+
+          return (
+            '<div class="leaderboard-item">' +
+            medal +
+            "<strong>" +
+            escapeHTML(entry.name) +
+            "</strong> — " +
+            entry.score +
+            "/10" +
+            "</div>"
+          );
+        }
+      )
+      .join("");
+}
+
+
+function closeQuiz() {
+
+  document
+    .getElementById("quizName")
+    .value = "";
+
+  hideAllSections();
+}
+
+
+
+/* =====================================================
+   SPIN THE WHEEL
+===================================================== */
+
+let wheelRotation = 0;
+let wheelSpinning = false;
+
+
+function openSpinRegistration() {
+
+  hideAllSections();
+
+  document
+    .getElementById(
+      "spinRegistration"
+    )
+    .classList.remove("hidden");
+
+  document
+    .getElementById("spinName")
+    .focus();
+}
+
+
+function joinWheel() {
+
+  const input =
+    document.getElementById(
+      "spinName"
+    );
+
+  const name =
+    input.value.trim();
+
+  if (!name) {
+
+    alert("Please enter your name.");
+
+    return;
+  }
+
+
+  /* ADMIN LOGIN */
+
+  if (
+    name.toLowerCase() ===
+    "admin"
+  ) {
+
+    input.value = "";
+
+    openAdminWheel();
+
+    return;
+  }
+
+
+  let names =
+    getWheelNames();
+
+
+  const alreadyExists =
+    names.some(
+      savedName =>
+        savedName.toLowerCase() ===
+        name.toLowerCase()
     );
 
 
-    /* =====================================
-       ENTER NAME
-    ===================================== */
+  if (alreadyExists) {
 
-    beginQuizBtn.addEventListener(
-      "click",
-      function() {
-
-        const name =
-          guestName.value.trim();
-
-        if (!name) {
-
-          showToast(
-            "Please enter your name first."
-          );
-
-          guestName.focus();
-
-          return;
-        }
-
-        playerName = name;
-
-        currentQuestion = 0;
-        score = 0;
-
-        nameBox.style.display = "none";
-        resultBox.style.display = "none";
-        questionContainer.style.display = "block";
-
-        showQuestion();
-
-      }
+    alert(
+      "Your name is already on the wheel!"
     );
 
+    return;
+  }
 
-    guestName.addEventListener(
-      "keydown",
-      function(event) {
 
-        if (event.key === "Enter") {
-          beginQuizBtn.click();
-        }
+  names.push(name);
 
-      }
+  saveWheelNames(names);
+
+  input.value = "";
+
+  document
+    .getElementById(
+      "spinRegistration"
+    )
+    .classList.add("hidden");
+
+  document
+    .getElementById(
+      "joinedWheel"
+    )
+    .classList.remove("hidden");
+
+  document
+    .getElementById(
+      "joinedMessage"
+    )
+    .textContent =
+    "🎉 " +
+    name +
+    " has joined the wheel!";
+}
+
+
+function getWheelNames() {
+
+  return JSON.parse(
+    localStorage.getItem(
+      "rhyneKenWheelNames"
+    ) || "[]"
+  );
+}
+
+
+function saveWheelNames(names) {
+
+  localStorage.setItem(
+    "rhyneKenWheelNames",
+    JSON.stringify(names)
+  );
+}
+
+
+function openAdminWheel() {
+
+  hideAllSections();
+
+  document
+    .getElementById(
+      "adminWheel"
+    )
+    .classList.remove("hidden");
+
+  drawWheel();
+
+  displayWheelNames();
+}
+
+
+function displayWheelNames() {
+
+  const names =
+    getWheelNames();
+
+  const box =
+    document.getElementById(
+      "wheelNames"
     );
 
+  if (!names.length) {
 
-    /* =====================================
-       DISPLAY QUESTION
-    ===================================== */
+    box.innerHTML =
+      "<em>No guests have joined yet.</em>";
 
-    function showQuestion() {
+    return;
+  }
 
-      const data =
-        quizQuestions[currentQuestion];
+  box.innerHTML =
+    names
+      .map(
+        name =>
+          "🎟️ " +
+          escapeHTML(name)
+      )
+      .join("<br>");
+}
 
-      questionCount.textContent =
-        `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
 
-      questionText.textContent =
-        data.question;
+function drawWheel() {
 
-      const progress =
-        ((currentQuestion + 1)
-          / quizQuestions.length) * 100;
+  const canvas =
+    document.getElementById("wheel");
 
-      progressFill.style.width =
-        progress + "%";
+  const ctx =
+    canvas.getContext("2d");
 
-      answers.innerHTML = "";
+  const names =
+    getWheelNames();
 
-      const letters =
-        ["A", "B", "C", "D"];
+  const center =
+    canvas.width / 2;
 
-      data.choices.forEach(
-        (choice, index) => {
+  const radius =
+    center - 10;
 
-          const button =
-            document.createElement("button");
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
 
-          button.className =
-            "answer-btn";
 
-          button.innerHTML =
-            `
-            <span class="answer-letter">
-              ${letters[index]}
-            </span>
+  if (!names.length) {
 
-            <span>
-              ${choice}
-            </span>
-            `;
+    ctx.fillStyle =
+      "#193d6e";
 
-          button.addEventListener(
-            "click",
-            function() {
+    ctx.beginPath();
 
-              selectAnswer(
-                index,
-                button
-              );
+    ctx.arc(
+      center,
+      center,
+      radius,
+      0,
+      Math.PI * 2
+    );
 
-            }
-          );
+    ctx.fill();
 
-          answers.appendChild(button);
 
-        }
+    ctx.fillStyle =
+      "white";
+
+    ctx.font =
+      "bold 28px Arial";
+
+    ctx.textAlign =
+      "center";
+
+    ctx.textBaseline =
+      "middle";
+
+    ctx.fillText(
+      "Waiting for guests...",
+      center,
+      center
+    );
+
+    return;
+  }
+
+
+  const colors = [
+    "#e31f32",
+    "#1769d2",
+    "#f4c430",
+    "#27a85f",
+    "#7f4bd9",
+    "#f07d23",
+    "#00a7b5",
+    "#db3f9b"
+  ];
+
+
+  const slice =
+    (Math.PI * 2) /
+    names.length;
+
+
+  names.forEach(
+    (name, index) => {
+
+      const start =
+        index * slice;
+
+      const end =
+        start + slice;
+
+
+      ctx.beginPath();
+
+      ctx.moveTo(
+        center,
+        center
       );
 
-    }
-
-
-    /* =====================================
-       SELECT ANSWER
-    ===================================== */
-
-    function selectAnswer(
-      selectedIndex,
-      selectedButton
-    ) {
-
-      const question =
-        quizQuestions[currentQuestion];
-
-      const buttons =
-        document.querySelectorAll(
-          ".answer-btn"
-        );
-
-      buttons.forEach(
-        button => {
-          button.disabled = true;
-        }
+      ctx.arc(
+        center,
+        center,
+        radius,
+        start,
+        end
       );
+
+      ctx.closePath();
+
+      ctx.fillStyle =
+        colors[
+          index %
+          colors.length
+        ];
+
+      ctx.fill();
+
+
+      ctx.strokeStyle =
+        "white";
+
+      ctx.lineWidth = 3;
+
+      ctx.stroke();
+
+
+      ctx.save();
+
+      ctx.translate(
+        center,
+        center
+      );
+
+      ctx.rotate(
+        start +
+        slice / 2
+      );
+
+      ctx.textAlign =
+        "right";
+
+      ctx.textBaseline =
+        "middle";
+
+      ctx.fillStyle =
+        "white";
+
+      ctx.font =
+        names.length > 10
+          ? "bold 14px Arial"
+          : "bold 18px Arial";
+
+
+      let displayName =
+        name;
 
       if (
-        selectedIndex ===
-        question.answer
+        displayName.length >
+        14
       ) {
 
-        score++;
-
-        selectedButton.classList.add(
-          "correct"
-        );
-
-      } else {
-
-        selectedButton.classList.add(
-          "wrong"
-        );
-
-        buttons[
-          question.answer
-        ].classList.add(
-          "correct"
-        );
-
+        displayName =
+          displayName.substring(
+            0,
+            13
+          ) + "…";
       }
 
-      setTimeout(
-        function() {
 
-          currentQuestion++;
-
-          if (
-            currentQuestion <
-            quizQuestions.length
-          ) {
-
-            showQuestion();
-
-          } else {
-
-            finishQuiz();
-
-          }
-
-        },
-        700
+      ctx.fillText(
+        displayName,
+        radius - 20,
+        0
       );
 
-    }
-
-
-    /* =====================================
-       FINISH QUIZ
-    ===================================== */
-
-    function finishQuiz() {
-
-      questionContainer.style.display =
-        "none";
-
-      resultBox.style.display =
-        "block";
-
-      resultName.textContent =
-        `Great Job, ${playerName}!`;
-
-      finalScore.textContent =
-        `${score}/10`;
-
-      let message = "";
-
-      if (score === 10) {
-
-        message =
-          "🎉 PERFECT SCORE! You really know Ken very well!";
-
-      } else if (score >= 8) {
-
-        message =
-          "🕷️ Amazing! You know Ken very well!";
-
-      } else if (score >= 6) {
-
-        message =
-          "👏 Great job! You know a lot about Ken!";
-
-      } else if (score >= 4) {
-
-        message =
-          "😊 Nice try! You learned more about Ken today!";
-
-      } else {
-
-        message =
-          "🎂 Thanks for playing Ken's birthday quiz!";
-
-      }
-
-      finalMessage.textContent =
-        message;
-
-      saveScore(
-        playerName,
-        score
-      );
-
-      displayRanking();
-
-      loadLeader();
+      ctx.restore();
 
     }
+  );
 
 
-    /* =====================================
-       SAVE SCORE
+  /* center circle */
 
-       IMPORTANT:
-       GitHub Pages is a static website.
-       This stores scores in the current
-       guest's phone/browser only.
-    ===================================== */
+  ctx.beginPath();
 
-    function getScores() {
+  ctx.arc(
+    center,
+    center,
+    45,
+    0,
+    Math.PI * 2
+  );
 
-      try {
+  ctx.fillStyle =
+    "#ffffff";
 
-        return JSON.parse(
-          localStorage.getItem(
-            "kenBirthdayQuizScores"
-          )
-        ) || [];
+  ctx.fill();
 
-      } catch (error) {
+  ctx.fillStyle =
+    "#16365f";
 
-        return [];
+  ctx.font =
+    "bold 18px Arial";
 
-      }
+  ctx.textAlign =
+    "center";
 
-    }
+  ctx.textBaseline =
+    "middle";
 
+  ctx.fillText(
+    "SPIN",
+    center,
+    center
+  );
+}
 
-    function saveScore(
-      name,
-      playerScore
-    ) {
 
-      let scores =
-        getScores();
+function spinWheel() {
 
-      const existing =
-        scores.find(
-          item =>
-            item.name.toLowerCase() ===
-            name.toLowerCase()
-        );
+  if (wheelSpinning) {
+    return;
+  }
 
-      if (existing) {
 
-        if (
-          playerScore >
-          existing.score
-        ) {
+  const names =
+    getWheelNames();
 
-          existing.score =
-            playerScore;
 
-        }
+  if (!names.length) {
 
-      } else {
+    alert(
+      "No guest names are on the wheel yet."
+    );
 
-        scores.push({
-          name: name,
-          score: playerScore
-        });
+    return;
+  }
 
-      }
 
-      scores.sort(
-        (a, b) =>
-          b.score - a.score
-      );
+  if (names.length < 2) {
 
-      scores =
-        scores.slice(0, 20);
+    alert(
+      "At least 2 guest names are recommended."
+    );
+  }
 
-      localStorage.setItem(
-        "kenBirthdayQuizScores",
-        JSON.stringify(scores)
-      );
 
-    }
+  wheelSpinning = true;
 
 
-    /* =====================================
-       HIGHEST SCORER
-    ===================================== */
+  document
+    .getElementById(
+      "winnerBox"
+    )
+    .innerHTML =
+    "🎡 Spinning...";
 
-    function loadLeader() {
 
-      const scores =
-        getScores();
-
-      if (!scores.length) {
-
-        leaderName.textContent =
-          "No player yet";
-
-        leaderScore.textContent =
-          "Be the first to play!";
-
-        return;
-      }
-
-      leaderName.textContent =
-        `🏆 ${scores[0].name}`;
-
-      leaderScore.textContent =
-        `${scores[0].score} out of 10`;
-
-    }
-
-
-    /* =====================================
-       SCORE LIST
-    ===================================== */
-
-    function displayRanking() {
-
-      const scores =
-        getScores();
-
-      rankingList.innerHTML = "";
-
-      if (!scores.length) {
-
-        rankingList.innerHTML =
-          "<p>No scores yet.</p>";
-
-        return;
-      }
-
-      scores.forEach(
-        (item, index) => {
-
-          const row =
-            document.createElement("div");
-
-          row.className =
-            "rank-row";
-
-          let medal =
-            `${index + 1}.`;
-
-          if (index === 0)
-            medal = "🥇";
-
-          if (index === 1)
-            medal = "🥈";
-
-          if (index === 2)
-            medal = "🥉";
-
-          row.innerHTML =
-            `
-            <span>
-              <span class="rank-number">
-                ${medal}
-              </span>
-              ${item.name}
-            </span>
-
-            <span class="rank-score">
-              ${item.score}/10
-            </span>
-            `;
-
-          rankingList.appendChild(row);
-
-        }
-      );
-
-    }
-
-
-    /* =====================================
-       PLAY AGAIN
-    ===================================== */
-
-    playAgainBtn.addEventListener(
-      "click",
-      function() {
-
-        resultBox.style.display =
-          "none";
-
-        nameBox.style.display =
-          "block";
-
-        guestName.value = "";
-
-        guestName.focus();
-
-      }
+  const winnerIndex =
+    Math.floor(
+      Math.random() *
+      names.length
     );
 
 
-    /* =====================================
-       BIRTHDAY COUNTDOWN
-    ===================================== */
-
-    function updateCountdown() {
-
-      const birthdayStart =
-        new Date(
-          "2026-08-30T18:00:00+08:00"
-        ).getTime();
-
-      const now =
-        Date.now();
-
-      const difference =
-        birthdayStart - now;
-
-      if (difference <= 0) {
-
-        countdown.innerHTML =
-          "🎉 It's Rhyne Ken's Birthday Celebration!";
-
-        return;
-      }
-
-      const days =
-        Math.floor(
-          difference /
-          (1000 * 60 * 60 * 24)
-        );
-
-      const hours =
-        Math.floor(
-          (difference %
-          (1000 * 60 * 60 * 24))
-          /
-          (1000 * 60 * 60)
-        );
-
-      const minutes =
-        Math.floor(
-          (difference %
-          (1000 * 60 * 60))
-          /
-          (1000 * 60)
-        );
-
-      countdown.innerHTML =
-        `⏳ ${days}d ${hours}h ${minutes}m until Ken's birthday celebration!`;
-
-    }
+  const sliceDegrees =
+    360 /
+    names.length;
 
 
-    updateCountdown();
+  /*
+     Canvas starts at 3 o'clock.
+     Pointer is at 12 o'clock.
+  */
 
-    setInterval(
-      updateCountdown,
-      60000
+  const winnerCenter =
+    winnerIndex *
+      sliceDegrees +
+    sliceDegrees / 2;
+
+
+  const targetAtPointer =
+    270 -
+    winnerCenter;
+
+
+  const extraTurns =
+    360 *
+    (
+      7 +
+      Math.floor(
+        Math.random() * 4
+      )
     );
 
 
-    /* =====================================
-       SHARE INVITATION
-    ===================================== */
-
-    document
-      .getElementById("shareBtn")
-      .addEventListener(
-        "click",
-        async function() {
-
-          const shareData = {
-
-            title:
-              "Rhyne Ken's 2nd Birthday",
-
-            text:
-              "🎉 You're invited to Rhyne Ken L. Mercado's 2nd Birthday Celebration on August 30, 2026 at 6:00 PM!",
-
-            url:
-              window.location.href
-
-          };
-
-          try {
-
-            if (
-              navigator.share
-            ) {
-
-              await navigator.share(
-                shareData
-              );
-
-            } else {
-
-              await navigator.clipboard.writeText(
-                window.location.href
-              );
-
-              showToast(
-                "Invitation link copied!"
-              );
-
-            }
-
-          } catch (error) {
-
-            console.log(error);
-
-          }
-
-        }
-      );
+  wheelRotation +=
+    extraTurns +
+    targetAtPointer -
+    (
+      wheelRotation %
+      360
+    );
 
 
-    /* =====================================
-       TOAST MESSAGE
-    ===================================== */
+  const wheel =
+    document.getElementById(
+      "wheel"
+    );
 
-    function showToast(message) {
 
-      toast.textContent =
-        message;
+  wheel.style.transform =
+    "rotate(" +
+    wheelRotation +
+    "deg)";
 
-      toast.classList.add(
-        "show"
-      );
 
-      setTimeout(
-        function() {
+  setTimeout(
+    () => {
 
-          toast.classList.remove(
-            "show"
-          );
+      const winner =
+        names[winnerIndex];
 
-        },
-        2500
-      );
 
+      document
+        .getElementById(
+          "winnerBox"
+        )
+        .innerHTML =
+        "🏆 WINNER 🏆<br>" +
+        "<span style='font-size:34px;color:white'>" +
+        escapeHTML(winner) +
+        "</span>";
+
+
+      wheelSpinning = false;
+
+    },
+    5200
+  );
+}
+
+
+function resetWheel() {
+
+  const answer =
+    confirm(
+      "Remove ALL guest names from the wheel?"
+    );
+
+
+  if (!answer) {
+    return;
+  }
+
+
+  localStorage.removeItem(
+    "rhyneKenWheelNames"
+  );
+
+
+  document
+    .getElementById(
+      "winnerBox"
+    )
+    .innerHTML = "";
+
+
+  wheelRotation = 0;
+
+
+  const wheel =
+    document.getElementById(
+      "wheel"
+    );
+
+
+  wheel.style.transition =
+    "none";
+
+  wheel.style.transform =
+    "rotate(0deg)";
+
+
+  setTimeout(
+    () => {
+
+      wheel.style.transition =
+        "transform 5s cubic-bezier(.17,.67,.18,1)";
+
+    },
+    50
+  );
+
+
+  drawWheel();
+
+  displayWheelNames();
+}
+
+
+function closeSpin() {
+
+  hideAllSections();
+
+  document
+    .getElementById(
+      "spinName"
+    )
+    .value = "";
+}
+
+
+
+/* =====================================================
+   GENERAL FUNCTIONS
+===================================================== */
+
+function hideAllSections() {
+
+  const ids = [
+    "quizRegistration",
+    "quizArea",
+    "quizResult",
+    "spinRegistration",
+    "joinedWheel",
+    "adminWheel"
+  ];
+
+
+  ids.forEach(
+    id => {
+
+      document
+        .getElementById(id)
+        .classList.add("hidden");
     }
+  );
+}
 
 
-    /* INITIALIZE */
+function shareInvitation() {
 
-    loadLeader();
+  const shareData = {
 
-    displayRanking();
+    title:
+      "Rhyne Ken's 2nd Birthday",
 
-  </script>
+    text:
+      "🎉 You're invited to Rhyne Ken L. Mercado's 2nd Birthday Celebration!"
+  };
+
+
+  if (navigator.share) {
+
+    navigator
+      .share(shareData)
+      .catch(() => {});
+
+  } else {
+
+    alert(
+      "Share this invitation link with your family and friends."
+    );
+  }
+}
+
+
+function escapeHTML(text) {
+
+  const div =
+    document.createElement("div");
+
+  div.textContent =
+    text;
+
+  return div.innerHTML;
+}
+
+</script>
 
 </body>
 </html>
